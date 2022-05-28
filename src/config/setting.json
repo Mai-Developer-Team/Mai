@@ -1,0 +1,6 @@
+{
+    "debug": "False",
+    "version": "3.0.0dev",
+    "prefix": "m",
+    "devprefix": "m#"
+}
