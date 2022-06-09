@@ -4,8 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests = "*"
-melisa = "==0.0.1.dev2"
+hikari = "*"
+hikari-lightbulb = "*"
 python-dotenv = "*"
 
 [dev-packages]

@@ -1,4 +1,7 @@
-import melisa 
+import hikari 
+import lightbulb
+
+import logging
 
 from config import setting
 
@@ -12,15 +15,27 @@ else:
     token = setting.token #yes
 
 
-client = melisa.Client(
-    token,
-    intents = [
-        melisa.Intents.GUILD_MEMBERS,
-        melisa.Intents.GUILD_MESSAGES
-    ],
-    activity = melisa.presence.Activity(setting.version, type = melisa.ActivityType.COMPETING),
-    logs = info
+client = lightbulb.BotApp(
+    token = token,
+    prefix = prefix,
+    intents = hikari.Intents.ALL_MESSAGES | hikari.Intents.GUILDS | hikari.Intents.MESSAGE_CONTENT,
+    logs = {
+        "version": 1,
+        "incremental": True,
+        "loggers": {
+            "hikari": {"level": info},
+            "hikari.ratelimits": {"level": "TRACE_HIKARI"},
+            "lightbulb": {"level": "DEBUG"}
+            },
+        }
 )
 
+#client.load_extensions_from("./plugins")
+#TODO: fix load plugins :D
+client.run(
+    activity = hikari.Activity(
+        name = f"hikari {hikari.__version__} | Mai {setting.version}",
+        type = hikari.ActivityType.WATCHING
+        )
+)
 
-client.run_autosharded()
