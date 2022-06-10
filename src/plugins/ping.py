@@ -4,12 +4,13 @@ plugin = lightbulb.Plugin("ping")
 
 
 @plugin.command()
-@lightbulb.command("ping")
+@lightbulb.command("ping", description = "da")
 @lightbulb.implements(lightbulb.PrefixCommand)
 async def ping(ctx: lightbulb.Context) -> None:
 
-    await ctx.send("pong")
+    await ctx.respond("pong")
 
 
-plugin.command(ping)
+def load(client):
+    client.add_plugin(plugin)
 
