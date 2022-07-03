@@ -44,7 +44,6 @@ if __name__ == '__main__':
         else:
             pass
 
-
 client.run(
     activity = hikari.Activity(
         name = f"hikari {hikari.__version__} | Mai {setting.version}",

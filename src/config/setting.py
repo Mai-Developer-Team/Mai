@@ -15,7 +15,8 @@ color = 0x2f3136
 
 
 plugins = [
-    "plugins.ping"
+    "plugins.dev.ping",
+    "plugins.info.stats"
     #"event.shard_tracker"
 ]
 
