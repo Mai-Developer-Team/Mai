@@ -12,10 +12,12 @@ if setting.debug == False:
     info = "INFO"
     prefix = setting.prefix 
     token = setting.token
+    status = setting.status
 else:
     info = "DEBUG"
     prefix = setting.devprefix
     token = setting.token #yes
+    status = setting.debug_status
 
 
 client = lightbulb.BotApp(
@@ -46,7 +48,7 @@ if __name__ == '__main__':
 
 client.run(
     activity = hikari.Activity(
-        name = f"hikari {hikari.__version__} | Mai {setting.version}",
+        name = setting.status,
         type = hikari.ActivityType.WATCHING
         )
 )

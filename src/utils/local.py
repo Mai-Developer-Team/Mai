@@ -2,12 +2,12 @@
 
 import json 
 
-def local_guilds(guild_id):
-    if guild_id == 992117772521836674:
-        return "ru-RU"
 
 def local_file(guild_id):
-    with open(f"./src/config/localization/{local_guilds(guild_id)}.json", "r", encoding='utf-8') as r:
+    if guild_id == 992117772521836674:
+        lang = "ru-RU"
+
+    with open(f"./src/config/localization/{lang}.json", "r", encoding='utf-8') as r:
         translate = json.load(r)
         return translate
 

@@ -13,6 +13,9 @@ prefix = "m"
 devprefix = "m#"
 color = 0x2f3136
 
+status = "https://me.shuoki.top/mai"
+debug_status = "котики чинят ботика >W<"
+
 
 plugins = [
     "plugins.dev.ping",
