@@ -8,29 +8,18 @@ import traceback
 
 from config import setting
 
-if setting.debug == False:
-    info = "INFO"
-    prefix = setting.prefix 
-    token = setting.token
-    status = setting.status
-else:
-    info = "DEBUG"
-    prefix = setting.devprefix
-    token = setting.token #yes
-    status = setting.debug_status
-
 
 client = lightbulb.BotApp(
-    token = token,
-    prefix = prefix,
+    token = setting.token,
+    prefix = setting.prefix,
     intents = hikari.Intents.ALL_MESSAGES | hikari.Intents.GUILDS | hikari.Intents.MESSAGE_CONTENT,
     logs = {
         "version": 1,
         "incremental": True,
         "loggers": {
-            "hikari": {"level": info},
+            "hikari": {"level": setting.info},
             "hikari.ratelimits": {"level": "TRACE_HIKARI"},
-            "lightbulb": {"level": info}
+            "lightbulb": {"level": setting.info}
             },
         }
 )

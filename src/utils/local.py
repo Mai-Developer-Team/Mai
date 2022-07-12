@@ -11,5 +11,17 @@ def local_file(guild_id):
         translate = json.load(r)
         return translate
 
+def help_category_info(guild_id):
+    return local_file(guild_id)["help_category_info"]
+
+def help_name_command(guild_id):
+    return local_file(guild_id)["help_name_command"]
+
+def help_description_command(guild_id):
+    return local_file(guild_id)["help_description_command"]
+
 def stats(guild_id, guilds, users, shards, shard_server_id):
     return local_file(guild_id)["stats"].format(guilds, users, shards, shard_server_id)
+
+def help_err(guild_id, command):
+    return local_file(guild_id)["help_err"].format(command)

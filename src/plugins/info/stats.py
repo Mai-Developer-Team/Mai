@@ -3,8 +3,9 @@ from utils import local
 
 plugin = lightbulb.Plugin("stats")
 
+
 @plugin.command()
-@lightbulb.command("stats", description = "ho-ho")
+@lightbulb.command("stats", description = "Циферки красивые")
 @lightbulb.implements(lightbulb.PrefixCommand)
 async def stats(ctx: lightbulb.Context) -> None:
     
@@ -17,7 +18,6 @@ async def stats(ctx: lightbulb.Context) -> None:
             ctx.get_guild().shard_id
             )
     )
-
 
 def load(client):
     client.add_plugin(plugin)
