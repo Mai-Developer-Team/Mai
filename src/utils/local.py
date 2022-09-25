@@ -11,6 +11,7 @@ def local_file(guild_id):
         translate = json.load(r)
         return translate
 
+#Все что внизу, хуйня не нужная)
 def help_category_info(guild_id):
     return local_file(guild_id)["help_category_info"]
 
