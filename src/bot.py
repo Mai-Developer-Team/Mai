@@ -11,8 +11,7 @@ from config import setting
 
 client = lightbulb.BotApp(
     token = setting.token,
-    prefix = setting.prefix,
-    intents = hikari.Intents.ALL_MESSAGES | hikari.Intents.GUILDS | hikari.Intents.MESSAGE_CONTENT,
+    intents = hikari.Intents.ALL_MESSAGES | hikari.Intents.GUILDS | hikari.Intents.MESSAGE_CONTENT | hikari.Intents.GUILD_MEMBERS,
     logs = {
         "version": 1,
         "incremental": True,

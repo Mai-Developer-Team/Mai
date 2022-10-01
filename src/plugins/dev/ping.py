@@ -1,14 +1,19 @@
 import lightbulb
 
-plugin = lightbulb.Plugin("ping")
+from config import setting
+from utils import local
+
+plugin = lightbulb.Plugin("ping", default_enabled_guilds=setting.guild_id)
 
 
 @plugin.command()
-@lightbulb.command("ping", description = "da")
-@lightbulb.implements(lightbulb.PrefixCommand)
+@lightbulb.command("ping", "blyat cringe")
+@lightbulb.implements(lightbulb.SlashCommand)
 async def ping(ctx: lightbulb.Context) -> None:
 
-    await ctx.respond("pong")
+    await ctx.respond(
+        local.localization(ctx.get_guild().id)["ping"]
+    )
 
 
 def load(client):
