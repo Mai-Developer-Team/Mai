@@ -7,6 +7,7 @@ token = os.environ.get("TOKEN")
 webhook_id = 891360914819932261
 webhook_token = os.environ.get("WEBHOOK_TOKEN")
 guild_id = [992117772521836674]
+mongodb_client = os.environ.get("MONGO")
 
 debug = False
 version = "3.0.0.dev2"
