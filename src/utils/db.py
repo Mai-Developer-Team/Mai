@@ -13,12 +13,12 @@ def user(id):
                     "id": id,
                     "profile": { 
                         "color": None,
-                        "premium": None,
+                        "premium": 0,
                         "badge": None,
                         "bio": None
                     },
                     "eco": {
-                        "xp": None,
+                        "xp": 0,
                         "rod": None,
                         "fish_hook": None,
                         "banner": None,
