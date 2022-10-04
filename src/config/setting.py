@@ -25,9 +25,10 @@ color = 0x2f3136
 
 
 plugins = [
-    "plugins.info.custom_help",
+    "plugins.basic.custom_help",
+    "plugins.basic.stats",
+    "plugins.basic.username",
     "plugins.dev.ping",
-    "plugins.info.stats"
     #"event.shard_tracker"
 ]
 

@@ -1,6 +1,10 @@
 {
    "help.command_categoty.basic": "Основные команды",
 
+   "userinfo.title": "",
+   "username.user": "",
+   "username.date": "",
+
    "ping": "понг!"
 
 }

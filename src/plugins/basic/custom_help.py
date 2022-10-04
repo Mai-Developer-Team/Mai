@@ -18,7 +18,7 @@ async def help(ctx: lightbulb.Context) -> None:
         hikari.Embed(color = setting.color)
         .add_field(
             name=l["help.command_categoty.basic"], 
-            value="</ping:1025071954027347989>, </stats:1025811202946912368>")
+            value="</ping:1025071954027347989>, </stats:1025811202946912368>, </userinfo:1026850965854363689>")
     )
 
     await ctx.respond(embed = embed)
