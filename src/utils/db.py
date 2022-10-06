@@ -12,7 +12,6 @@ def user(id):
             {
                     "id": id,
                     "profile": { 
-                        "color": None,
                         "premium": 0,
                         "badge": None,
                         "bio": None

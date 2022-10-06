@@ -1,9 +1,13 @@
 {
    "help.command_categoty.basic": "Основные команды",
 
-   "userinfo.title": "",
-   "username.user": "",
-   "username.date": "",
+   "userinfo.title": "Информация о пользователе",
+   "userinfo.user": "Пользователь",
+   "userinfo.date": "Дата регистрации",
+   "userinfo.badge": "Значки",
+   "userinfo.bio": "О себе",
+   "userinfo.block": "Осторожно",
+   "userinfo.block.reason": "Данный пользователь находится в чёрном списке по причине:\n**{}**",
 
    "ping": "понг!"
 
