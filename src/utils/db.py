@@ -3,8 +3,13 @@ import hikari
 
 from config import setting
 
+import dns.resolver
+
+dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
+dns.resolver.default_resolver.nameservers=['8.8.8.8']
 cluster = MongoClient(setting.mongodb_client) 
 db = cluster.maiv3
+
 
 def user(id):
     if not db.user.find_one({"id": id}):

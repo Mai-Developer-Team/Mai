@@ -28,6 +28,7 @@ plugins = [
     "plugins.basic.custom_help",
     "plugins.basic.stats",
     "plugins.basic.username",
+    "plugins.basic.serverinfo",
     "plugins.dev.ping",
     #"event.shard_tracker"
 ]
