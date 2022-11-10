@@ -4,8 +4,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 token = os.environ.get("TOKEN")
-webhook_id = 891360914819932261
-webhook_token = os.environ.get("WEBHOOK_TOKEN")
+webhook_id_shard = 1040292382844932147
+webhook_id_status = 1040292752673493114
+webhook_token_shard = os.environ.get("WEBHOOK_TOKEN_SHARD")
+webhook_token_status = os.environ.get("WEBHOOK_TOKEN_STATUS")
 guild_id = [992117772521836674]
 mongodb_client = os.environ.get("MONGO")
 
@@ -27,9 +29,10 @@ color = 0x2f3136
 plugins = [
     "plugins.basic.custom_help",
     "plugins.basic.stats",
-    "plugins.basic.username",
+    "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.dev.ping",
-    #"event.shard_tracker"
+    "event.shard_tracker",
+    "event.status_tracker"
 ]
 
