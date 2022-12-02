@@ -8,7 +8,7 @@ webhook_id_shard = 1040292382844932147
 webhook_id_status = 1040292752673493114
 webhook_token_shard = os.environ.get("WEBHOOK_TOKEN_SHARD")
 webhook_token_status = os.environ.get("WEBHOOK_TOKEN_STATUS")
-guild_id = [992117772521836674]
+guild_id = [992117772521836674, 807900317823402004]
 mongodb_client = os.environ.get("MONGO")
 
 debug = False
@@ -32,7 +32,8 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.dev.ping",
-    "event.shard_tracker",
-    "event.status_tracker"
+    "plugins.dev.eval"
+    #"event.shard_tracker",
+    #"event.status_tracker"
 ]
 
