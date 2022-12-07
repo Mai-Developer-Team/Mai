@@ -37,3 +37,18 @@ def user(id):
             )
     else:
         return db.user.find_one({"id": id})
+
+def server(id):
+    if not db.server.find_one({"id": id}):
+        db.server.insert_one(
+            {
+                "id": id,
+                "localization": "ru-RU",
+                "premium": 0,
+                "setting": {
+                    "poka ne pridumal": False
+                }
+            }
+        )
+    else:
+        return db.server.find_one({"id": id})

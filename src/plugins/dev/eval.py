@@ -2,6 +2,7 @@ import lightbulb
 import hikari
 
 from config import setting
+from utils import db
 
 import typing
 import ast
@@ -26,6 +27,7 @@ async def eval(ctx: lightbulb.Context) -> None:
         "_channel": ctx.get_channel(),
         "_guild": ctx.get_guild(),
         "_ctx": ctx,
+        "_db": db.db
     }
 
     code = cmd.replace("```py", "").replace("`", "").strip()

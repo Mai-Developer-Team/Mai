@@ -1,12 +1,18 @@
 #DEV
 
-import json 
+import json
+
+from utils import db
 
 
 def localization(guild_id):
-    if guild_id == 992117772521836674:
-        lang = "ru-RU"
+    l = db.server(guild_id)
 
-    with open(f"./src/config/localization/{lang}.json", "r", encoding='utf-8') as r:
+    if not l:
+        local = 'ru-RU'
+    else:
+        local = l["localization"]
+
+    with open(f"./src/config/localization/{local}.json", "r", encoding='utf-8') as r:
         translate = json.load(r)
         return translate
