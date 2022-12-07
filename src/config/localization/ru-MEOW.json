@@ -1,14 +1,14 @@
 {
-   "help.command_categoty.basic": "Основные команды",
+   "help.command_categoty.basic": "Основные мявки",
 
-   "userinfo.title": "Информация о пользователе",
-   "userinfo.user": "Пользователь",
-   "userinfo.date": "Дата регистрации",
+   "userinfo.title": "Информация о коте",
+   "userinfo.user": "Кот",
+   "userinfo.date": "Дата мявгистрации",
    "userinfo.badge": "Значки",
-   "userinfo.bio": "О себе",
-   "userinfo.block": ":warning: Осторожно",
-   "userinfo.block.reason": "Данный пользователь находится в чёрном списке по причине:\n**{}**",
+   "userinfo.bio": "О коте",
+   "userinfo.block": ":warning: Мяу!",
+   "userinfo.block.reason": "Данный кот находится в черной коробке по причине:\n**{}**",
 
-   "ping": "понг!"
+   "ping": "Мяу!"
 
 }
