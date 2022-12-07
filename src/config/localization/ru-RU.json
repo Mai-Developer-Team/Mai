@@ -6,7 +6,7 @@
    "userinfo.date": "Дата регистрации",
    "userinfo.badge": "Значки",
    "userinfo.bio": "О себе",
-   "userinfo.block": "Осторожно",
+   "userinfo.block": ":warning: Осторожно",
    "userinfo.block.reason": "Данный пользователь находится в чёрном списке по причине:\n**{}**",
 
    "ping": "понг!"
