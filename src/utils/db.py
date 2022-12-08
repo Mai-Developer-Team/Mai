@@ -45,9 +45,7 @@ def server(id):
                 "id": id,
                 "localization": "ru-RU",
                 "premium": 0,
-                "setting": {
-                    "poka ne pridumal": False
-                }
+                "setting": {}
             }
         )
     else:

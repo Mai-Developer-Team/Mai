@@ -1,4 +1,5 @@
 import lightbulb
+import hikari
 
 from config import setting
 from utils import local
@@ -8,11 +9,28 @@ plugin = lightbulb.Plugin("stats", default_enabled_guilds=setting.guild_id)
 
 
 @plugin.command()
-@lightbulb.command("stats", "Циферки красивые")
+@lightbulb.command("stats", "Статистика Маи")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def stats(ctx: lightbulb.Context) -> None:
-    
-    await ctx.respond("Тут статистика, но нету еще дизайна")
+    l = local.localization(ctx.get_guild().id)
+
+    guild_count = await ctx.bot.rest.fetch_my_guilds().count()
+    all_shard = ctx.bot.shard_count
+    shard_id = ctx.get_guild().shard_id
+
+    emb = (
+        hikari.Embed(
+            title = l["stats.title"],
+            color=setting.color
+        )
+        .add_field(name= l["stats.guild_count"], value=guild_count)
+        .add_field(name= l["stast.all_shard"], value=all_shard)
+        .add_field(name= l["stast.shard_id"], value=shard_id)
+        .add_field(name= l["stats.version_library"], value=f'**hikari({hikari.__version__})** | **lightbulb({lightbulb.__version__})**')
+        .add_field(name= l["stats.version_bot"], value=setting.version)
+    )
+
+    await ctx.respond(embed=emb)
 
 def load(client):
     client.add_plugin(plugin)
