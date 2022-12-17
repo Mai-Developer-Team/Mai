@@ -32,7 +32,8 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.dev.ping",
-    "plugins.dev.eval"
+    "plugins.dev.eval",
+    "event.error"
     #"event.shard_tracker",
     #"event.status_tracker"
 ]

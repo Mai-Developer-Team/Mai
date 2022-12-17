@@ -1,17 +1,19 @@
 import lightbulb
 import hikari
+from datetime import datetime, timezone
 
 from config import setting
 from utils import local
 
 
 plugin = lightbulb.Plugin("stats", default_enabled_guilds=setting.guild_id)
-
+date = datetime.utcnow().replace(tzinfo=timezone.utc)
 
 @plugin.command()
 @lightbulb.command("stats", "Статистика Маи")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def stats(ctx: lightbulb.Context) -> None:
+    #TODO: сделать статистику по пользователям 
     l = local.localization(ctx.get_guild().id)
 
     guild_count = await ctx.bot.rest.fetch_my_guilds().count()
@@ -26,6 +28,7 @@ async def stats(ctx: lightbulb.Context) -> None:
         .add_field(name= l["stats.guild_count"], value=guild_count)
         .add_field(name= l["stast.all_shard"], value=all_shard)
         .add_field(name= l["stast.shard_id"], value=shard_id)
+        .add_field(name= l["stast.uptime"], value=f"<t:{date.timestamp():.0f}:R>")
         .add_field(name= l["stats.version_library"], value=f'**hikari({hikari.__version__})** | **lightbulb({lightbulb.__version__})**')
         .add_field(name= l["stats.version_bot"], value=setting.version)
     )

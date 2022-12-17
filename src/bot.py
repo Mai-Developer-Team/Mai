@@ -37,9 +37,7 @@ if __name__ == '__main__':
             pass
 
 client.run(
-    activity = hikari.Activity(
-        name = setting.status,
-        type = hikari.ActivityType.WATCHING
-        )
-)
-
+    activity = hikari.Activity( 
+        name = setting.status, 
+        type = hikari.ActivityType.COMPETING)
+    )

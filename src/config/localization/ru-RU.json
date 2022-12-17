@@ -13,6 +13,7 @@
    "stats.guild_count": "Всего серверов",
    "stast.all_shard": "Всего осколков",
    "stast.shard_id": "Осколок сервера",
+   "stats.uptime": "Бот работает",
    "stats.version_library": "Версия библиотеки",
    "stats.version_bot": "Версия бота",
 
