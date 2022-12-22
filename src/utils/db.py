@@ -17,7 +17,10 @@ def user(id):
             {
                     "id": id,
                     "profile": { 
-                        "premium": 0,
+                        "premium": {
+                            "presence": 0,
+                            "guild_add_premium": None
+                        },
                         "badge": None,
                         "bio": None
                     },

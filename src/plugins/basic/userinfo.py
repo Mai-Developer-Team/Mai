@@ -45,6 +45,8 @@ async def userinfo(ctx: lightbulb.Context) -> None:
     if not info:
         ...
     else:
+        if info["profile"]["premium"]["presence"] == 1:
+            emb.add_field(name = l["userinfo.premium"], value = l["userinfo.premium.message"])
         if info["blacklist"]["block"] == 1:
             emb.add_field(name = l["userinfo.block"], value = l["userinfo.block.reason"].format(info["blacklist"]["reason"]))
         if info["profile"]["badge"] is not None:

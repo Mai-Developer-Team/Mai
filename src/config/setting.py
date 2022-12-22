@@ -33,6 +33,7 @@ plugins = [
     "plugins.basic.serverinfo",
     "plugins.dev.ping",
     "plugins.dev.eval",
+    "plugins.setting.guild_setting",
     "event.error"
     #"event.shard_tracker",
     #"event.status_tracker"

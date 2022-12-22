@@ -1,4 +1,6 @@
 {
+   "lang": "Русский",
+
    "help.command_categoty.basic": "Основные команды",
 
    "userinfo.title": "Информация о пользователе",
@@ -6,6 +8,8 @@
    "userinfo.date": "Дата регистрации",
    "userinfo.badge": "Значки",
    "userinfo.bio": "О себе",
+   "userinfo.premium": "Подписка",
+   "userinfo.premium.message": "Подключена подписка из-за поддержки бота",
    "userinfo.block": ":warning: Осторожно",
    "userinfo.block.reason": "Данный пользователь находится в чёрном списке по причине:\n**{}**",
 
@@ -16,6 +20,8 @@
    "stats.uptime": "Бот работает",
    "stats.version_library": "Версия библиотеки",
    "stats.version_bot": "Версия бота",
+
+   "help.command_categoty.setting": "Настройки",
 
    "ping": "понг!"
 

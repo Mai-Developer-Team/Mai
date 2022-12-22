@@ -1,4 +1,6 @@
 {
+   "lang": "Русский",
+
    "help.command_categoty.basic": "Основные мявки",
 
    "userinfo.title": "Информация о коте",
@@ -6,6 +8,8 @@
    "userinfo.date": "Дата мявгистрации",
    "userinfo.badge": "Значки",
    "userinfo.bio": "О коте",
+   "userinfo.premium": "Подписка",
+   "userinfo.premium.message": "Подключена подписка из-за поддержки бота",
    "userinfo.block": ":warning: Мяу!",
    "userinfo.block.reason": "Данный кот находится в черной коробке по причине:\n**{}**",
 
@@ -16,6 +20,8 @@
    "stats.uptime": "Бот работает",
    "stats.version_library": "Версия библиотеки",
    "stats.version_bot": "Версия бота",
+
+   "help.command_categoty.setting": "Настройки",
 
    "ping": "Мяу!"
 
