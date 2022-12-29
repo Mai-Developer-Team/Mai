@@ -46,7 +46,7 @@ async def userinfo(ctx: lightbulb.Context) -> None:
         ...
     else:
         if info["profile"]["premium"]["presence"] == 1:
-            emb.add_field(name = l["userinfo.premium"], value = l["userinfo.premium.message"])
+            emb.add_field(name = l["userinfo.premium"], value = l["userinfo.premium.message"]) #TODO: вставка времени timestamp для показа сколько действует буст
         if info["blacklist"]["block"] == 1:
             emb.add_field(name = l["userinfo.block"], value = l["userinfo.block.reason"].format(info["blacklist"]["reason"]))
         if info["profile"]["badge"] is not None:

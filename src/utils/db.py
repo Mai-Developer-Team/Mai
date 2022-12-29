@@ -18,7 +18,6 @@ def user(id):
                     "id": id,
                     "profile": { 
                         "premium": {
-                            "presence": 0,
                             "guild_add_premium": None
                         },
                         "badge": None,
@@ -40,6 +39,9 @@ def user(id):
             )
     else:
         return db.user.find_one({"id": id})
+
+def premium(id):
+    return db.premium.find_one({"id": id})
 
 def server(id):
     if not db.server.find_one({"id": id}):
