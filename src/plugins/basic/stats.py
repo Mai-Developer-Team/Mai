@@ -26,9 +26,9 @@ async def stats(ctx: lightbulb.Context) -> None:
             color=setting.color
         )
         .add_field(name= l["stats.guild_count"], value=guild_count)
-        .add_field(name= l["stast.all_shard"], value=all_shard)
-        .add_field(name= l["stast.shard_id"], value=shard_id)
-        .add_field(name= l["stast.uptime"], value=f"<t:{date.timestamp():.0f}:R>")
+        .add_field(name= l["stats.all_shard"], value=all_shard)
+        .add_field(name= l["stats.shard_id"], value=shard_id)
+        .add_field(name= l["stats.uptime"], value=f"<t:{date.timestamp():.0f}:R>")
         .add_field(name= l["stats.version_library"], value=f'**hikari({hikari.__version__})** | **lightbulb({lightbulb.__version__})**')
         .add_field(name= l["stats.version_bot"], value=setting.version)
     )
