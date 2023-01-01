@@ -11,11 +11,11 @@ plugin = lightbulb.Plugin("error", default_enabled_guilds=setting.guild_id)
 async def on_error(event: lightbulb.CommandErrorEvent) -> None:
 
     if isinstance(event.exception, lightbulb.CommandInvocationError):
-        await event.context.respond('Произошла критическая ошибка в команде! Если ничего не измениться, то обратитесь на сервер поддержки')
+        await event.context.respond('Произошла критическая ошибка в команде! Если ничего не измениться, то обратитесь на сервер поддержки', flags=hikari.MessageFlag.EPHEMERAL)
     if isinstance(event.exception, lightbulb.NotOwner):
-        await event.context.respond("https://http.cat/400")
+        await event.context.respond("https://http.cat/400", flags=hikari.MessageFlag.EPHEMERAL)
     if isinstance(event.exception, lightbulb.CheckFailure):
-        await event.context.respond(f"Возможные причины ошибки:\n`[1]`У вас закончился буст на сервере\n`[2]`Вы не является альфа-тестером")
+        await event.context.respond(f"Возможные причины ошибки:\n`[1]`У вас закончился буст на сервере\n`[2]`Вы не является альфа-тестером", flags=hikari.MessageFlag.EPHEMERAL)
     
     #логи
     if isinstance(event.exception, (lightbulb.CommandInvocationError)):

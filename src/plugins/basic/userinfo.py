@@ -45,8 +45,10 @@ async def userinfo(ctx: lightbulb.Context) -> None:
     if not info:
         ...
     else:
-        if info["profile"]["premium"]["presence"] == 1:
-            emb.add_field(name = l["userinfo.premium"], value = l["userinfo.premium.message"]) #TODO: вставка времени timestamp для показа сколько действует буст
+        if db.premium(member.id) != None:
+            boost_dtc = db.premium(member.id)["originalDate"].replace(microsecond=0)
+            boost_time = datetime.datetime.strftime(boost_dtc, '%d.%m.%Y')
+            emb.add_field(name = l["userinfo.premium"], value = l["userinfo.premium.message"].format(boost_time))
         if info["blacklist"]["block"] == 1:
             emb.add_field(name = l["userinfo.block"], value = l["userinfo.block.reason"].format(info["blacklist"]["reason"]))
         if info["profile"]["badge"] is not None:
@@ -61,4 +63,3 @@ async def userinfo(ctx: lightbulb.Context) -> None:
 
 def load(client):
     client.add_plugin(plugin)
-

@@ -10,6 +10,7 @@ def alpha_tester(context: lightbulb.Context) -> bool:
 @lightbulb.Check
 def beta_tester(context: lightbulb.Context) -> bool:
     guild_tester = db.server(context.get_guild().id)
-    
-    if guild_tester["premium"] == 1:
+    owner_boost = db.premium(context.get_guild().owner_id)
+
+    if owner_boost != None and guild_tester["premium"] == 1:
         return context.get_guild().id

@@ -13,10 +13,10 @@ date = datetime.utcnow().replace(tzinfo=timezone.utc)
 @lightbulb.command("stats", "Статистика Маи")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def stats(ctx: lightbulb.Context) -> None:
-    #TODO: сделать статистику по пользователям 
     l = local.localization(ctx.get_guild().id)
 
     guild_count = await ctx.bot.rest.fetch_my_guilds().count()
+    member_count = len(ctx.bot.cache.get_users_view())
     all_shard = ctx.bot.shard_count
     shard_id = ctx.get_guild().shard_id
 
@@ -26,6 +26,7 @@ async def stats(ctx: lightbulb.Context) -> None:
             color=setting.color
         )
         .add_field(name= l["stats.guild_count"], value=guild_count)
+        .add_field(name= l["stats.member_count"], value=member_count)
         .add_field(name= l["stats.all_shard"], value=all_shard)
         .add_field(name= l["stats.shard_id"], value=shard_id)
         .add_field(name= l["stats.uptime"], value=f"<t:{date.timestamp():.0f}:R>")
