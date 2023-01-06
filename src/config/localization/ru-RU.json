@@ -22,6 +22,26 @@
    "stats.version_library": "Версия библиотеки",
    "stats.version_bot": "Версия бота",
 
+   "serverinfo.title": "Информация о сервере {}",
+   "serverinfo.name.general_information": "Основная информация",
+   "serverinfo.value.general_information": "**Владелец**: <@{}>\n**Основной язык сервера**: {}\n**Уровень защиты**: {}",
+   "serverinfo.name.general_channel": "Основные каналы",
+   "serverinfo.value.general_channel": "**Правила**: {}\n**Системный канал**: {}",
+   "serverinfo.general_channel.NONE": "Отсутствует",
+   "serverinfo.name.member": "Участники",
+   "serverinfo.value.member": "**Всего участников**: {}",
+   "serverinfo.name.boost_information": "Буст сервера",
+   "serverinfo.value.boost_information": "**Уровень сервера**: {}\n**Всего бустов**: {}",
+   "serverinfo.lang_server.de": "Немецкий",
+   "serverinfo.lang_server.en-US": "Английский",
+   "serverinfo.lang_server.ru": "Русский",
+   "serverinfo.lang_server.uk": "Украинский",
+   "serverinfo.verify_server.NONE": "Нету",
+   "serverinfo.verify_server.LOW": "Низкий",
+   "serverinfo.verify_server.MEDIUM": "Средний",
+   "serverinfo.verify_server.HIGH": "Высокий",
+   "serverinfo.verify_server.VERY_HIGH": "Очень высокий OwO",
+
    "help.command_categoty.setting": "Настройки",
 
    "ping": "понг!"

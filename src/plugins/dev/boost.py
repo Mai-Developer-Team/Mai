@@ -18,6 +18,11 @@ async def boost(ctx: lightbulb.Context) -> None:
     premium = db.premium(user.id)
     
     if premium is None:
+        '''
+        Даты две, потому что одна отвечает за удаление записи, 
+        потому что время отлечается от московского на 3 часа, 
+        а вторая уже московская, потому что хост в Москве
+        '''
         db.db.premium.insert_one(
             {
                 "expireAt": datetime.datetime.now() + datetime.timedelta(hours = -3, days = 30), 
