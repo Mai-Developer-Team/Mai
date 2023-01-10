@@ -16,20 +16,16 @@ def user(id):
         db.user.insert_one(
             {
                 "id": id,
-                "profile": { 
-                    "premium": {
-                        "guild_add_premium": None
-                    },
-                    "badge": None,
-                    "bio": None
+                "premium": {
+                    "guild_add_premium": None
                 },
-                "eco": {
-                    "xp": 0,
-                    "rod": None,
-                    "fish_hook": None,
-                    "banner": None,
-                    "contract": None
-                },
+                "badge": None,
+                "bio": None,
+                "xp": 0,
+                "rod": None,
+                "fish_hook": None,
+                "banner": None,
+                "contract": None,
                 "genshin_token": None,
                 "blacklist": {
                     "block": 0,

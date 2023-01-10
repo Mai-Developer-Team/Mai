@@ -51,10 +51,10 @@ async def userinfo(ctx: lightbulb.Context) -> None:
             emb.add_field(name = l["userinfo.premium"], value = l["userinfo.premium.message"].format(boost_time))
         if info["blacklist"]["block"] == 1:
             emb.add_field(name = l["userinfo.block"], value = l["userinfo.block.reason"].format(info["blacklist"]["reason"]))
-        if info["profile"]["badge"] is not None:
-            emb.add_field(name = l["userinfo.badge"], value = info["profile"]["badge"])
-        if info["profile"]["bio"] is not None:
-            emb.add_field(name = l["userinfo.bio"], value = info["profile"]["bio"])
+        if info["badge"] is not None:
+            emb.add_field(name = l["userinfo.badge"], value = info["badge"])
+        if info["bio"] is not None:
+            emb.add_field(name = l["userinfo.bio"], value = info["bio"])
     
     emb.set_image(member.avatar_url)
 
