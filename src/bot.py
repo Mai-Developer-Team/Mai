@@ -1,5 +1,6 @@
 import hikari 
 import lightbulb
+import miru
 
 import logging
 import os
@@ -24,6 +25,7 @@ client = lightbulb.BotApp(
             },
         }
 )
+miru.install(client)
 
 if __name__ == '__main__':
     for plugin in setting.plugins:

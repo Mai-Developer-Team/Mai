@@ -35,6 +35,7 @@ plugins = [
     "plugins.dev.eval",
     "plugins.dev.boost",
     "plugins.setting.guild_setting",
+    "plugins.setting.user_setting",
     "event.error"
     #"event.shard_tracker"
     #"event.status_tracker"
