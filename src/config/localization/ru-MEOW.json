@@ -29,7 +29,7 @@
    "serverinfo.value.general_channel": "**Правила**: {}\n**Системный канал**: {}",
    "serverinfo.general_channel.NONE": "нет",
    "serverinfo.name.member": "Коты",
-   "serverinfo.value.member": "**Всего участников**: {}",
+   "serverinfo.value.member": "**Всего котов**: {}",
    "serverinfo.name.boost_information": "Буст клубка",
    "serverinfo.value.boost_information": "**Уровень клубка**: {}\n**Всего бустов**: {}",
    "serverinfo.lang_server.de": "Немецкий Miau",
