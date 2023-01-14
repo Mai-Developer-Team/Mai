@@ -5,7 +5,7 @@ from utils import db
 
 @lightbulb.Check
 def alpha_tester(context: lightbulb.Context) -> bool:
-    return context.author.id == [364437278728388611, 675714186898309133]
+    return context.author.id == 364437278728388611
 
 @lightbulb.Check
 def beta_tester(context: lightbulb.Context) -> bool:

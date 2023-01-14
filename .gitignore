@@ -6,3 +6,4 @@ Pipfile.lock
 
 #dev
 .env
+lavalink

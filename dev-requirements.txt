@@ -5,6 +5,7 @@ pipenv
 hikari==2.0.0.dev115
 hikari-lightbulb==2.3.1
 hikari-miru==2.0.2
+lavaplayer==1.0.10a0
 
 python-dotenv==0.21.0
 requests==2.28.1

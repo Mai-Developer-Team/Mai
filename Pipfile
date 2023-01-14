@@ -11,6 +11,7 @@ requests = "==2.28.1"
 pymongo = "==4.3.3"
 dnspython = "==2.2.1"
 hikari-miru = "*"
+lavaplayer = "*"
 
 [dev-packages]
 
