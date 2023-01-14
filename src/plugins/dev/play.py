@@ -19,6 +19,12 @@ async def play(ctx: lightbulb.Context) -> None:
     await lavalink.wait_for_connection(ctx.get_guild().id)
 
     result = await lavalink.auto_search_tracks(query)
+
+    if isinstance(result, lavalink.PlayList):
+        await lavalink.add_to_queue(ctx.get_guild().id, result.tracks, ctx.author.id)
+        await ctx.respond(f"Добавлено **{len(result.tracks)}** треков в очередь")
+        return 
+        
     await lavalink.play(ctx.get_guild().id, result[0], ctx.member.id)
 
     await ctx.respond(f'Сейчас играет **{result[0].title}**')
