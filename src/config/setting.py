@@ -34,11 +34,11 @@ plugins = [
     "plugins.dev.ping",
     "plugins.dev.eval",
     "plugins.dev.boost",
-    "plugins.dev.play",
+    #"plugins.dev.play",
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
-    "event.error",
-    "event.player_tracker"
+    "event.error"
+    #"event.player_tracker"
     #"event.shard_tracker"
     #"event.status_tracker"
 ]

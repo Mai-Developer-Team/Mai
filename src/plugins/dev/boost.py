@@ -12,7 +12,7 @@ plugin = lightbulb.Plugin("boost", default_enabled_guilds=setting.guild_id)
 
 @plugin.command()
 @lightbulb.add_checks(lightbulb.owner_only)
-@lightbulb.command("Выдача примиум", "Выдать премиум пользователю")
+@lightbulb.command("Выдача прeмиум", "Выдать премиум пользователю")
 @lightbulb.implements(lightbulb.UserCommand)
 async def boost(ctx: lightbulb.Context) -> None:
     user = ctx.options.target
