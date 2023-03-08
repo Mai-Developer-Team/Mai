@@ -8,6 +8,6 @@ hikari-miru==2.0.4
 lavaplayer==1.0.10a0
 
 python-dotenv==0.21.1
-requests==2.28.1
+requests==2.28.2
 pymongo==4.3.3
 dnspython==2.3.0
