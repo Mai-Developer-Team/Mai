@@ -23,7 +23,7 @@ else:
     token = token #yes
     status = "котики чинят ботика >W<"
     
-color = 0x2f3136
+color = 0x2b2d31
 
 
 plugins = [
