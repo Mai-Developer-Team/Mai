@@ -1,7 +1,7 @@
 {
    "lang": "Русский",
 
-   "help.command_categoty.basic": "Основные мявки",
+   "help.command_category.basic": "Основные мявки",
 
    "userinfo.title": "Информация о коте",
    "userinfo.user": "Кот",
@@ -42,7 +42,25 @@
    "serverinfo.verify_server.HIGH": "Выш",
    "serverinfo.verify_server.VERY_HIGH": "Выше",
 
-   "help.command_categoty.setting": "Шерсть",
+   "help.command_category.reaction": "Реакции",
+
+   "reaction.error": "Нельзя использовать реакции на себя!",
+   "reaction.hug.title": "Обнимашки >W<",
+   "reaction.hug.description": "{} обнял(а) в сильных объятиях {}",
+   "reaction.poke.title": "ОЙ",
+   "reaction.poke.description": "{} тыкнул(а) {}",
+   "reaction.kiss.title": "Как мило OwO",
+   "reaction.kiss.description": "{} поцеловал(а) в щечку {}",
+   "reaction.pat.title": "Как мило >W<",
+   "reaction.pat.description": "{} погладил(а), как котёнка {}",
+   "reaction.happy.title": "Как весело >W<",
+   "reaction.happy.description": "{} веселится вместе {}",
+   "reaction.cry.title": "Печалька :c",
+   "reaction.cry.description": "{} грустит вместе с {}",
+   "reaction.slap.title": "Какой сильный удар",
+   "reaction.slap.description": "{} ударил(а) {}",
+
+   "help.command_category.setting": "Шерсть",
 
    "ping": "Мяу!"
 

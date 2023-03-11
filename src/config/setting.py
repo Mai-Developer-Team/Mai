@@ -31,13 +31,14 @@ plugins = [
     "plugins.basic.stats",
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
+    "plugins.reaction.reaction",
     "plugins.dev.ping",
     "plugins.dev.eval",
     "plugins.dev.boost",
     #"plugins.dev.play",
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
-    "event.error"
+    #"event.error"
     #"event.player_tracker"
     #"event.shard_tracker"
     #"event.status_tracker"

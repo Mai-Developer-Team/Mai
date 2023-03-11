@@ -9,7 +9,7 @@ plugin = lightbulb.Plugin("user_setting", default_enabled_guilds=setting.guild_i
 
 
 class UserSettingModal(miru.Modal):
-    bio = miru.TextInput(label="О себе", style=hikari.TextInputStyle.PARAGRAPH, max_length=30)
+    bio = miru.TextInput(label="О себе", style=hikari.TextInputStyle.PARAGRAPH, max_length=32)
 
     async def callback(self, ctx: miru.ModalContext) -> None:
         if not db.user(ctx.author.id):
