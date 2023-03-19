@@ -12,6 +12,7 @@ pymongo = "==4.3.3"
 dnspython = "==2.3.0"
 hikari-miru = "*"
 lavaplayer = "*"
+pynepcord = "*"
 
 [dev-packages]
 

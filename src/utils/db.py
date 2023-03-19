@@ -23,6 +23,8 @@ def user(id):
                 "badge": None,
                 "bio": None,
                 "xp": 0,
+                "coin": 0,
+                "macoin": 0,
                 "rod": None,
                 "fish_hook": None,
                 "banner": None,
