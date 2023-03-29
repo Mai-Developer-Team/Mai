@@ -13,6 +13,7 @@ plugin = lightbulb.Plugin("guild_setting", default_enabled_guilds=setting.guild_
 @lightbulb.implements(lightbulb.SlashCommand)
 async def guild_setting(ctx: lightbulb.Context) -> None:
     #TODO: привязать бд, локализацию и добавить кнопки на управление
+    #TODO: сделать за выходные
 
     emb = hikari.Embed(
             title = f"Настройки сервера {ctx.get_guild().name}",

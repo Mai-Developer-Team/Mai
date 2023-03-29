@@ -10,7 +10,7 @@ plugin = lightbulb.Plugin("error", default_enabled_guilds=setting.guild_id)
 @plugin.listener(lightbulb.CommandErrorEvent)
 async def on_error(event: lightbulb.CommandErrorEvent) -> None:
 
-    l = local.localization(event.context.guild_id())
+    l = local.localization(event.context.get_guild().id)
 
     if isinstance(event.exception, lightbulb.CommandInvocationError):
         await event.context.respond(

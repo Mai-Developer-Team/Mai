@@ -33,7 +33,7 @@ def up(
     }
 
     headers = {
-        "Authorization": f"Bot {setting.bc_key}",
+        "Authorization": f"Bot {setting.bcKeyBot}",
         "Content-Type": "application/json"
     }
 
@@ -58,5 +58,24 @@ def server(serverID):
     res = requests.get(url_api.format(f"server/{serverID}"))
     return res
 
-#TODO: до конца сделать :klass:
-#def shortlink()
+def shortlink_get(code):
+    data = {
+        "code": code
+    }
+    headers = {
+        "Authorization": f"Profile {setting.bckeyProfile}"
+    }
+    res = requests.post(url_api.format("links/get"), headers=headers, json=data)
+    return res
+
+def shortlink_add(url, code, domain=None):
+    data = {
+        "code": code,
+        "link": url,
+        "domain": domain
+    }
+    headers = {
+        "Authorization": f"Profile {setting.bckeyProfile}"
+    }
+    res = requests.post(url_api.format("links/create"), headers=headers, json=data)
+    return res
