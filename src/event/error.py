@@ -2,7 +2,7 @@ import hikari
 import lightbulb
 
 from config import setting
-from utils import access
+from utils import local
 
 plugin = lightbulb.Plugin("error", default_enabled_guilds=setting.guild_id)
 
@@ -10,9 +10,11 @@ plugin = lightbulb.Plugin("error", default_enabled_guilds=setting.guild_id)
 @plugin.listener(lightbulb.CommandErrorEvent)
 async def on_error(event: lightbulb.CommandErrorEvent) -> None:
 
+    l = local.localization(event.context.guild_id())
+
     if isinstance(event.exception, lightbulb.CommandInvocationError):
         await event.context.respond(
-            'Произошла критическая ошибка в команде! Если ничего не измениться, то обратитесь на сервер поддержки',
+            l["error.CommandInvocationError"],
             flags=hikari.MessageFlag.EPHEMERAL
             )
     if isinstance(event.exception, lightbulb.NotOwner):
@@ -22,7 +24,7 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
             )
     if isinstance(event.exception, lightbulb.CheckFailure):
         await event.context.respond(
-            f"Возможные причины ошибки:\n`[1]`У вас закончился буст на сервере\n`[2]`Вы не является альфа-тестером", 
+            l["error.CheckFailure"], 
             flags=hikari.MessageFlag.EPHEMERAL
             )
     
