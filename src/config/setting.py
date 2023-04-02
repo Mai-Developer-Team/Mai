@@ -18,7 +18,7 @@ version = "3.0.0.dev3"
 if debug == False:
     info = "INFO"
     token = token
-    status = "https://me.shuoki.top/mai"
+    status = "https://mai.shuoki.top/"
 else:
     info = "DEBUG"
     token = token #yes
@@ -33,6 +33,8 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.reaction.reaction",
+    "plugins.integration.up",
+    "plugins.integration.bcinfo",
     "plugins.dev.ping",
     "plugins.dev.eval",
     "plugins.dev.boost",

@@ -47,15 +47,18 @@ def up(
         return d
 
 def user(userID):
-    res = requests.get(url_api.format(f"profile/{userID}"))
+    s = f"profile/{userID}"
+    res = requests.get(url_api.format(s))
     return res
 
 def bot(botID):
-    res = requests.get(url_api.format(f"bot/{botID}"))
+    s = f"bot/{botID}"
+    res = requests.get(url_api.format(s))
     return res
 
 def server(serverID):
-    res = requests.get(url_api.format(f"server/{serverID}"))
+    s = f"server/{serverID}"
+    res = requests.get(url_api.format(s))
     return res
 
 def shortlink_get(code):
@@ -65,10 +68,10 @@ def shortlink_get(code):
     headers = {
         "Authorization": f"Profile {setting.bckeyProfile}"
     }
-    res = requests.post(url_api.format("links/get"), headers=headers, json=data)
+    res = requests.get(url_api.format("links/get"), headers=headers, json=data).json()
     return res
 
-def shortlink_add(url, code, domain=None):
+def shortlink_add(url, code, domain):
     data = {
         "code": code,
         "link": url,

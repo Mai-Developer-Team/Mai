@@ -8,7 +8,7 @@ import datetime
 
 
 plugin = lightbulb.Plugin("boost", default_enabled_guilds=setting.guild_id)
-#TODO: добавить авто-выдачу
+
 
 @plugin.command()
 @lightbulb.add_checks(lightbulb.owner_only)
