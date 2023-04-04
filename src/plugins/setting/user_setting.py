@@ -93,7 +93,7 @@ class UserSettingButton(miru.View):
 async def user_setting(ctx: lightbulb.Context) -> None:
 
     emb = hikari.Embed(
-        title="Настройки профиля в /userinfo",
+        title="Настройки профиля в /userinfo и /profile",
         description="Здесь можете **поставить/поменять** биографию и **включить/выключить** оповещение от бота",
         color=setting.color
     )

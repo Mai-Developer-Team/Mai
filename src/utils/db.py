@@ -28,7 +28,6 @@ def user(id):
                 "rod": None,
                 "fish_hook": None,
                 "banner": None,
-                "contract": None,
                 "genshin_token": None,
                 "blacklist": {
                     "block": 0,
@@ -49,7 +48,19 @@ def server(id):
                 "id": id,
                 "localization": "ru-RU",
                 "premium": 0,
-                "setting": {}
+                "disableCommand": False,
+                "kickBlacklist": False,
+                "WelcomeSetting": False,
+                "WelcomeText": None,
+                "GoodByeSetting": False,
+                "GoodByeText": None,
+                "logsSetting": False,
+                "logsConnectMember": False,
+                "logsLeaveMember": False,
+                "logsAuditLog": False,
+                "logsVoiceChannel": False,
+                "logsWebhookURL": None,
+                "blockSettings": False
             }
         )
     else:

@@ -17,16 +17,25 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
             l["error.CommandInvocationError"],
             flags=hikari.MessageFlag.EPHEMERAL
             )
+        return
     if isinstance(event.exception, lightbulb.NotOwner):
         await event.context.respond(
             "https://cdn.discordapp.com/attachments/996413253456511096/1083467516568948829/IMG_20230309_160732_416.jpg", 
             flags=hikari.MessageFlag.EPHEMERAL
             )
+        return
+    if isinstance(event.exception, lightbulb.MissingRequiredPermission):
+        await event.context.respond(
+            "da",
+            flags=hikari.MessageFlag.EPHEMERAL
+        )
+        return
     if isinstance(event.exception, lightbulb.CheckFailure):
         await event.context.respond(
             l["error.CheckFailure"], 
             flags=hikari.MessageFlag.EPHEMERAL
             )
+        return
     
     #логи
     if isinstance(event.exception, (lightbulb.CommandInvocationError)):
