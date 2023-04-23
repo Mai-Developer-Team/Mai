@@ -65,3 +65,6 @@ def server(id):
         )
     else:
         return db.server.find_one({"id": id})
+
+def promo(name):
+    return db.promocode.find_one({"name": name})

@@ -2,6 +2,8 @@ import hikari
 import lightbulb
 import miru
 
+import datetime
+
 from config import setting
 from utils import db
 
@@ -37,11 +39,23 @@ class UserSettingModal(miru.Modal):
                 }
                 )
 
+class PromoModal(miru.Modal):
+    namePromo = miru.TextInput(label="Введите промокод", style=hikari.TextInputStyle.PARAGRAPH, max_length=32)
+
+    async def callback(self, ctx: miru.ModalContext) -> None:
+        p = db.promo({"name": self.namePromo.value})
+
+
 class UserSettingButton(miru.View):
 
     @miru.button(label = "О себе", style = hikari.ButtonStyle.SUCCESS)
     async def setting_bio(self, button: miru.Button, ctx: miru.ViewContext):
         modal = UserSettingModal(title="Написать биографию для /userinfo")
+        await ctx.respond_with_modal(modal)
+    
+    @miru.button(label = "Промокод", style = hikari.ButtonStyle.SUCCESS)
+    async def setting_promo(self, button: miru.Button, ctx: miru.ViewContext):
+        modal = PromoModal(title="Воспользоваться промокодом")
         await ctx.respond_with_modal(modal)
     
     @miru.button(label = "Оповещение", style = hikari.ButtonStyle.SECONDARY)
@@ -94,7 +108,7 @@ async def user_setting(ctx: lightbulb.Context) -> None:
 
     emb = hikari.Embed(
         title="Настройки профиля в /userinfo и /profile",
-        description="Здесь можете **поставить/поменять** биографию и **включить/выключить** оповещение от бота",
+        description="Здесь можете **поставить/поменять** биографию, **включить/выключить** оповещение от бота и воспользоваться **промокодом**",
         color=setting.color
     )
     emb.set_footer(
