@@ -26,7 +26,7 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
         return
     if isinstance(event.exception, lightbulb.MissingRequiredPermission):
         await event.context.respond(
-            "da",
+            l["error.MissingRequiredPermission"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return

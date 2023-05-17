@@ -53,7 +53,7 @@ class UserSettingButton(miru.View):
         modal = UserSettingModal(title="Написать биографию для /userinfo")
         await ctx.respond_with_modal(modal)
     
-    @miru.button(label = "Промокод", style = hikari.ButtonStyle.SUCCESS)
+    @miru.button(label = "Промокод", style = hikari.ButtonStyle.SUCCESS, disabled=True)
     async def setting_promo(self, button: miru.Button, ctx: miru.ViewContext):
         modal = PromoModal(title="Воспользоваться промокодом")
         await ctx.respond_with_modal(modal)
