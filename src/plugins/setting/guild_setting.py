@@ -8,7 +8,7 @@ from utils import local, db
 
 plugin = lightbulb.Plugin("guild_setting", default_enabled_guilds=setting.guild_id)
 
-#TODO: сделать после релиза)
+
 class ServerSettingButton(miru.View):
     
     @miru.button(label=":gear:", style=hikari.ButtonStyle.PRIMARY)

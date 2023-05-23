@@ -39,7 +39,7 @@ async def userinfo(ctx: lightbulb.Context) -> None:
             title=l["userinfo.title"],
             color = setting.color
         )
-    emb.add_field(name = l["userinfo.user"], value=f"{member.username} | <@{member.id}>")
+    emb.add_field(name = l["userinfo.user"], value=f"@{member.username} | <@{member.id}>")
     emb.add_field(name = l["userinfo.date"], value=f"<t:{round(conv)}:D> (<t:{round(conv)}:R>)")
     
     if not info:

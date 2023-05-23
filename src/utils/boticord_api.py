@@ -12,21 +12,22 @@ def up(
     serverMemberAll,
     serverMemberOnline,
     serverOwnerID,
+    serverOwnerName,
     serverOwnerTag,
     upUserID,
     upChannelID,
     upChannelName
 ):
     data = {
-        "serverID": serverID,
+        "serverID": str(serverID),
         "up": 1,
         "status": 1,
         "serverName": serverName,
         "serverAvatar": serverAvatar,
         "serverMembersAllCount": serverMemberAll,
         "serverMembersOnlineCount": serverMemberOnline,
-        "serverOwnerID": serverOwnerID,
-        "serverOwnerTag": serverOwnerTag,
+        "serverOwnerID": str(serverOwnerID),
+        "serverOwnerTag": serverOwnerName + "#" + serverOwnerTag,
         "upUserID": upUserID,
         "upChannelID": upChannelID,
         "upChannelName": upChannelName
