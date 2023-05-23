@@ -13,7 +13,7 @@ guild_id = [992117772521836674, 807900317823402004, 833880841976938576]
 mongodb_client = os.environ.get("MONGO")
 
 debug = False
-version = "3.0.0.dev3"
+version = "3.0.0.dev4"
 
 if debug == False:
     info = "INFO"
@@ -38,6 +38,7 @@ plugins = [
     "plugins.dev.ping",
     "plugins.dev.eval",
     "plugins.dev.boost",
+    "plugins.dev.promo",
     #"plugins.dev.play",
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",

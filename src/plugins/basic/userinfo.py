@@ -28,7 +28,7 @@ async def userinfo(ctx: lightbulb.Context) -> None:
         member = ctx.member
     else:
         member = ctx.options.member
-    
+
     info = db.user(member.id)
     dtc = member.created_at.strftime('%Y-%m-%d %H:%M:%S')
     conv = datetime.datetime.strptime(dtc, '%Y-%m-%d %H:%M:%S').timestamp()
@@ -39,7 +39,7 @@ async def userinfo(ctx: lightbulb.Context) -> None:
             title=l["userinfo.title"],
             color = setting.color
         )
-    emb.add_field(name = l["userinfo.user"], value=f"{member} | {member.id}")
+    emb.add_field(name = l["userinfo.user"], value=f"@{member.username} | <@{member.id}>")
     emb.add_field(name = l["userinfo.date"], value=f"<t:{round(conv)}:D> (<t:{round(conv)}:R>)")
     
     if not info:
@@ -55,8 +55,9 @@ async def userinfo(ctx: lightbulb.Context) -> None:
             emb.add_field(name = l["userinfo.badge"], value = info["badge"])
         if info["bio"] is not None:
             emb.add_field(name = l["userinfo.bio"], value = info["bio"])
-    
-    emb.set_image(member.avatar_url)
+
+    emb.set_thumbnail(member.avatar_url)
+    emb.set_image(member.display_avatar_url)
 
     await ctx.respond(embed = emb)
 

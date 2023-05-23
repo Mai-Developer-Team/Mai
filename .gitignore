@@ -7,3 +7,5 @@ Pipfile.lock
 #dev
 .env
 lavalink
+venv
+.idea

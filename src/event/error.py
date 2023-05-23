@@ -26,7 +26,7 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
         return
     if isinstance(event.exception, lightbulb.MissingRequiredPermission):
         await event.context.respond(
-            "da",
+            l["error.MissingRequiredPermission"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return
@@ -41,7 +41,7 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
     if isinstance(event.exception, (lightbulb.CommandInvocationError)):
         thread = await event.bot.rest.create_thread(1053706633487859722, 11, f"Ошибка в команде {event.context.command.name}")
         await thread.send(
-            f"<@&807901614450671637>\nИспользовал её **{event.context.member}** в гильдии `{event.context.get_guild().name}`|`{event.context.get_guild().id}`\nОшибка ```python\n{type(event.exception.__cause__).__name__}: {event.exception.__cause__}```",
+            f"<@&890683001065848842>\nИспользовал её **{event.context.member}** в гильдии `{event.context.get_guild().name}`|`{event.context.get_guild().id}`\nОшибка ```python\n{type(event.exception.__cause__).__name__}: {event.exception.__cause__}```",
             role_mentions = True
         )
 

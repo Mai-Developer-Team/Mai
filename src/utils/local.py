@@ -1,5 +1,3 @@
-#DEV
-
 import json
 
 from utils import db
