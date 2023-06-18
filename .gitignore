@@ -9,3 +9,4 @@ Pipfile.lock
 lavalink
 venv
 .idea
+/src/migration
