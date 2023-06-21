@@ -2,7 +2,7 @@ import lightbulb
 import hikari
 
 from config import setting
-from utils import local, access, db
+from utils import local, access, db, level
 
 import random
 
@@ -16,7 +16,9 @@ plugin = lightbulb.Plugin("work", default_enabled_guilds=setting.guild_id)
 @lightbulb.implements(lightbulb.SlashCommand)
 async def work(ctx: lightbulb.Context) -> None:
     l = local.localization(ctx.get_guild().id)
+    level.add_xp(ctx.author.id)
 
+    #TODO: поменять после обт
     if db.premium(ctx.author.id) == None:
         coin = random.randint(300, 390)
         if random.randint(1, 1000) == 250:

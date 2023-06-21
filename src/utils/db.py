@@ -28,7 +28,6 @@ def user(id):
                 "rod": None,
                 "fish_hook": None,
                 "banner": None,
-                "genshin_token": None,
                 "blacklist": {
                     "block": 0,
                     "reason": None

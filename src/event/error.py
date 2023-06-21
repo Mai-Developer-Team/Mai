@@ -39,7 +39,6 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
             )
         return
     if isinstance(event.exception, lightbulb.CommandIsOnCooldown):
-        # f"This command is on cooldown. Retry in <t:{round(conv) + round(event.exception.retry_after)}:F>"
         dt = datetime.datetime.now()
         value = datetime.datetime.fromtimestamp(time.mktime(dt.timetuple()))
         conv = datetime.datetime.strptime(str(value), '%Y-%m-%d %H:%M:%S').timestamp()
@@ -51,7 +50,13 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
 
     #логи
     if isinstance(event.exception, (lightbulb.CommandInvocationError)):
-        thread = await event.bot.rest.create_thread(1053706633487859722, 11, f"Ошибка в команде {event.context.command.name}")
+        thread = await event.bot.rest.create_thread(
+            1053706633487859722,
+            11,
+            f"Ошибка в команде {event.context.command.name}",
+            auto_archive_duration=1,
+            reason="Отчет по ошибке"
+        )
         await thread.send(
             f"<@&890683001065848842>\nИспользовал её **{event.context.member}** в гильдии `{event.context.get_guild().name}`|`{event.context.get_guild().id}`\nОшибка ```python\n{type(event.exception.__cause__).__name__}: {event.exception.__cause__}```",
             role_mentions = True
