@@ -20,5 +20,5 @@ def beta_tester(context: lightbulb.Context) -> bool:
 def disable_command(context: lightbulb.Context) -> bool:
     guild_setting = db.server(context.get_guild().id)
     
-    if guild_setting["disableCommand"] == True:
+    if guild_setting["disableCommand"] == False:
         return context.get_guild().id

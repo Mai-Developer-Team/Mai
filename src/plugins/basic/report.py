@@ -44,21 +44,23 @@ async def report(ctx: lightbulb.Context) -> None:
     reason = ctx.options.reason
     image = ctx.options.image
 
+    l = local.localization(ctx.get_guild().id)
+
     if ctx.author.id == member.id:
         await ctx.respond(
-            "a",
+            l["report.error.author"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return
     if db.user(ctx.author.id)["blacklist"]["block"] == 1:
         await ctx.respond(
-            "Вы находитесь в черном списке бота, поэтому не можете отправлять жалобы на других пользователей",
+            l["report.error.blauthor"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return
     if db.user(member.id)["blacklist"]["block"] == 1:
         await ctx.respond(
-            "Данный пользователь уже был наказан",
+            l["report.error.blmember"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return
@@ -71,7 +73,7 @@ async def report(ctx: lightbulb.Context) -> None:
         })
 
         await ctx.respond(
-            "Спасибо за жалобу, мы в скором времени её рассмотрим!",
+            l["report.access"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
 
@@ -95,7 +97,7 @@ async def report(ctx: lightbulb.Context) -> None:
         return
     else:
         await ctx.respond(
-            "На данного пользователя уже был отправлена жалоба",
+            l["report.access.db"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return

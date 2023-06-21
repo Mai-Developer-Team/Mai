@@ -34,6 +34,7 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.basic.report",
+    "plugins.economic.work",
     "plugins.reaction.reaction",
     "plugins.integration.bcinfo",
     "plugins.dev.ping",
@@ -43,7 +44,7 @@ plugins = [
     #"plugins.dev.play",
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
-    #"event.error",
+    "event.error",
     #"event.shard_tracker",
     #"event.status_tracker"
 ]
