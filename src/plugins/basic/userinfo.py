@@ -41,14 +41,15 @@ async def userinfo(ctx: lightbulb.Context) -> None:
         )
     emb.add_field(name = l["userinfo.user"], value=f"@{member.username} | <@{member.id}>")
     emb.add_field(name = l["userinfo.date"], value=f"<t:{round(conv)}:D> (<t:{round(conv)}:R>)")
-    
+
+    if db.premium(member.id) != None:
+        boost_dtc = db.premium(member.id)["originalDate"].replace(microsecond=0)
+        boost_time = datetime.datetime.strftime(boost_dtc, '%d.%m.%Y')
+        emb.add_field(name=l["userinfo.premium"], value=l["userinfo.premium.message"].format(boost_time))
+
     if not info:
         ...
     else:
-        if db.premium(member.id) != None:
-            boost_dtc = db.premium(member.id)["originalDate"].replace(microsecond=0)
-            boost_time = datetime.datetime.strftime(boost_dtc, '%d.%m.%Y')
-            emb.add_field(name = l["userinfo.premium"], value = l["userinfo.premium.message"].format(boost_time))
         if info["blacklist"]["block"] == 1:
             emb.add_field(name = l["userinfo.block"], value = l["userinfo.block.reason"].format(info["blacklist"]["reason"]))
         if info["badge"] is not None:

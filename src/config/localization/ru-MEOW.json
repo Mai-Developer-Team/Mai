@@ -60,12 +60,38 @@
    "reaction.slap.title": "Какой сильный удар",
    "reaction.slap.description": "{} ударил(а) {}",
 
+   "report.error.author": "Вы не можете подать на себя жалобу",
+   "report.error.blauthor": "Вы находитесь в черном списке бота, поэтому не можете отправлять жалобы на других пользователей",
+   "report.error.blmember": "Данный пользователь уже был наказан",
+   "report.access": "Спасибо за жалобу, мы в скором времени её рассмотрим!",
+   "report.access.db": "На данного пользователя уже был отправлена жалоба",
+
    "help.command_category.setting": "Шерсть",
+
+
+   "help.command_category.economic": "Экономика",
+
+   "work.title": "Вы успешно поработали",
+   "work.desc": "Теперь отдохните 12 часов от работы",
+   "work.coin": "Заработали",
+   "work.macoin": "Вы получили дополнительную награду",
+
+   "profile.title": "Профиль @{}",
+   "profile.balance.coin": "Баланс",
+   "profile.balance.macoin": "Макойны",
+   "profile.lvl": "Уровень/XP",
+   "profile.lvl.display": "{} ур. / {} опыта",
+   "profile.rod": "Удочка",
+   "profile.rod.none": "Отсутсвует",
+   "profile.fishhook": "Крючки",
+   "profile.fishhook.none": "Отсутсвуют",
+
 
    "ping": "Мяу!",
 
 
    "error.CommandInvocationError": "<:bonchi_error:1086704118975963268> Произошла критическая ошибка в команде! Если ничего не измениться, то обратитесь на сервер поддержки",
-   "error.CheckFailure": "<:bonchi_error:1086704118975963268> Возможные причины ошибки:\n`[1]`У вас закончился буст на сервере\n`[2]`Вы не являетесь альфа-тестером",
-   "error.MissingRequiredPermission": "<:bonchi_error:1086704118975963268> У вас нету необходимых правил для использовании данной команды"
+   "error.CheckFailure": "<:bonchi_error:1086704118975963268> Возможные причины ошибки:\n`[1]`У вас закончился буст на сервере\n`[2]`Вы не являетесь альфа-тестером\n`[3]`На сервере выключены экономические команды",
+   "error.MissingRequiredPermission": "<:bonchi_error:1086704118975963268> У вас нету необходимых правил для использовании данной команды",
+   "error.CommandIsOnCooldown": "<:bonchi_error:1086704118975963268> У данной команды есть время отката! Попробуйте в <t:{}:F>"
 }

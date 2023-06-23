@@ -1,6 +1,8 @@
 import hikari
 import lightbulb
 
+import datetime, time
+
 from config import setting
 from utils import local
 
@@ -36,10 +38,25 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
             flags=hikari.MessageFlag.EPHEMERAL
             )
         return
-    
+    if isinstance(event.exception, lightbulb.CommandIsOnCooldown):
+        dt = datetime.datetime.now()
+        value = datetime.datetime.fromtimestamp(time.mktime(dt.timetuple()))
+        conv = datetime.datetime.strptime(str(value), '%Y-%m-%d %H:%M:%S').timestamp()
+        await event.context.respond(
+            l["error.CommandIsOnCooldown"].format(round(conv) + round(event.exception.retry_after)),
+            flags=hikari.MessageFlag.EPHEMERAL
+        )
+        return
+
     #логи
     if isinstance(event.exception, (lightbulb.CommandInvocationError)):
-        thread = await event.bot.rest.create_thread(1053706633487859722, 11, f"Ошибка в команде {event.context.command.name}")
+        thread = await event.bot.rest.create_thread(
+            1053706633487859722,
+            11,
+            f"Ошибка в команде {event.context.command.name}",
+            auto_archive_duration=1,
+            reason="Отчет по ошибке"
+        )
         await thread.send(
             f"<@&890683001065848842>\nИспользовал её **{event.context.member}** в гильдии `{event.context.get_guild().name}`|`{event.context.get_guild().id}`\nОшибка ```python\n{type(event.exception.__cause__).__name__}: {event.exception.__cause__}```",
             role_mentions = True

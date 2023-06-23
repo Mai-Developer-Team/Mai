@@ -5,7 +5,7 @@ from utils import boticord_api
 
 plugin = lightbulb.Plugin("bcinfo", default_enabled_guilds=setting.guild_id)
 
-
+#TODO: Сделать после выхода бк в2
 @plugin.command()
 @lightbulb.command("bcinfo", "узнать информацию с проекта BotiCord.top")
 @lightbulb.implements(lightbulb.SlashCommandGroup)
