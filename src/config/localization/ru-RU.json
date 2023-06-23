@@ -76,6 +76,16 @@
    "work.coin": "Заработали",
    "work.macoin": "Вы получили дополнительную награду",
 
+   "profile.title": "Профиль @{}",
+   "profile.balance.coin": "Баланс",
+   "profile.balance.macoin": "Макойны",
+   "profile.lvl": "Уровень/XP",
+   "profile.lvl.display": "{} ур. / {} опыта",
+   "profile.rod": "Удочка",
+   "profile.rod.none": "Отсутсвует",
+   "profile.fishhook": "Крючки",
+   "profile.fishhook.none": "Отсутсвуют",
+
 
    "ping": "понг!",
 

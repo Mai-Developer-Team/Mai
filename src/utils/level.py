@@ -18,13 +18,19 @@ def add_xp(id):
             }
         )
 
-#TODO: не работает, но должно)
+
 def display_lvl(id):
     if db.user(id) != None:
-        with open(f"./src/config/lvl_sys.json", "r", encoding='utf-8') as r:
-            l = json.load(r)
-
         d = db.user(id)["xp"]
 
-        if d >= l:
-            return l
+        #Я знаю, что это говно, но это мое
+        if d >= 0:
+            current_level = 0
+        if d >= 100:
+            current_level = 1
+        if d >= 200:
+            current_level = 2
+        if d >= 300:
+            current_level = 3
+
+        return current_level

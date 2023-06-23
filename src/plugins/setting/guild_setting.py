@@ -11,9 +11,9 @@ plugin = lightbulb.Plugin("guild_setting", default_enabled_guilds=setting.guild_
 
 class ServerSettingButton(miru.View):
     
-    @miru.button(label=":gear:", style=hikari.ButtonStyle.PRIMARY)
-    async def logsSetting(self, button: miru.Button, ctx: miru.ViewContext):
-        ...
+    @miru.button(label="a", style=hikari.ButtonStyle.PRIMARY)
+    async def logs_setting(self, button: miru.Button, ctx: miru.ViewContext):
+        await ctx.respond(1)
 
 @plugin.command()
 @lightbulb.add_checks(
@@ -38,9 +38,9 @@ async def guild_setting(ctx: lightbulb.Context) -> None:
 
     emb.set_thumbnail(ctx.get_guild().icon_url)
 
-    button = ServerSettingButton()
-    msg = await ctx.respond(embed=emb, component=button)
-    await button.start(msg)
+    #button = ServerSettingButton()
+    await ctx.respond(embed=emb)
+    #await button.start(msg)
 
 def load(client):
     client.add_plugin(plugin)
