@@ -13,7 +13,7 @@ pynepcord_token = os.environ.get("PYNEPCORD")
 guild_id = [992117772521836674, 807900317823402004, 833880841976938576]
 mongodb_client = os.environ.get("MONGO")
 
-debug = True
+debug = False
 version = "3.0.0.dev5"
 
 if debug == False:
