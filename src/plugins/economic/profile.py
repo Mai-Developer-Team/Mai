@@ -23,8 +23,8 @@ async def profile(ctx: lightbulb.Context) -> None:
     emb.add_field(name = l["profile.balance.coin"], value=f'{d["coin"]} :coin:', inline=True)
     emb.add_field(name = l["profile.balance.macoin"], value=f'{d["macoin"]} :star:', inline=True)
     emb.add_field(name = l["profile.lvl"], value=l["profile.lvl.display"].format(a, d["xp"]))
-    emb.add_field(name = l["profile.rod"], value=d["rod"] or l["profile.rod.none"], inline=True)
-    emb.add_field(name = l["profile.fishhook"], value=d["fish_hook"] or l["profile.fishhook.none"], inline=True)
+    emb.add_field(name = l["profile.rod"], value=l[f"fishing.rod.id.{d['rod']}"] or l["profile.rod.none"], inline=True)
+    emb.add_field(name = l["profile.fishhook"], value=l[f"fishing.fish_hook.id.{d['fish_hook']}"] or l["profile.fishhook.none"], inline=True)
     emb.set_thumbnail(ctx.author.avatar_url)
     emb.set_image(d["banner"])
 

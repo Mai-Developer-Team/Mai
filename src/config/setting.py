@@ -13,7 +13,7 @@ pynepcord_token = os.environ.get("PYNEPCORD")
 guild_id = [992117772521836674, 807900317823402004, 833880841976938576]
 mongodb_client = os.environ.get("MONGO")
 
-debug = False
+debug = True
 version = "3.0.0.dev5"
 
 if debug == False:
@@ -36,6 +36,7 @@ plugins = [
     "plugins.basic.report",
     "plugins.economic.work",
     "plugins.economic.profile",
+    "plugins.economic.fishing",
     "plugins.reaction.reaction",
     "plugins.integration.bcinfo",
     "plugins.dev.ping",
@@ -45,7 +46,7 @@ plugins = [
     #"plugins.dev.play",
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
-    "event.error",
+    #"event.error",
     #"event.shard_tracker",
     #"event.status_tracker"
 ]
