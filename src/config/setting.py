@@ -12,6 +12,8 @@ webhook_token_status = os.environ.get("WEBHOOK_TOKEN_STATUS")
 pynepcord_token = os.environ.get("PYNEPCORD")
 guild_id = [992117772521836674, 807900317823402004, 833880841976938576]
 mongodb_client = os.environ.get("MONGO")
+id_shop = os.environ.get("ID_SHOP")
+secret_key = os.environ.get("SECRET_KEY")
 
 debug = True
 version = "3.0.0.dev5"
@@ -34,6 +36,7 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.basic.report",
+    "plugins.basic.pay_boost",
     "plugins.economic.work",
     "plugins.economic.profile",
     "plugins.economic.fishing",
