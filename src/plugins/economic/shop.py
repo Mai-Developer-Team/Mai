@@ -11,7 +11,7 @@ plugin = lightbulb.Plugin("shop", default_enabled_guilds=setting.guild_id)
 @plugin.command()
 @lightbulb.add_checks(access.disable_command)
 @lightbulb.option(
-    name="покупка",
+    name="list",
     description="Выберите из списка, что вы хотите купить",
     type = hikari.OptionType.STRING,
     choices=[
@@ -24,12 +24,16 @@ plugin = lightbulb.Plugin("shop", default_enabled_guilds=setting.guild_id)
 @lightbulb.option(
     name="id",
     description="ID покупки",
-    type= hikari.OptionType.FLOAT,
+    type= hikari.OptionType.INTEGER,
     required=False
 )
 @lightbulb.command("shop", "Глобальный магазин бота")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def shop(ctx: lightbulb.Context) -> None:
+    l = local.localization(ctx.get_guild().id)
+    user = db.user(ctx.author.id)
+    list = ctx.options.list
+    id = int(ctx.options.id)
 
     class ShopButton(miru.View):
 
@@ -87,9 +91,35 @@ async def shop(ctx: lightbulb.Context) -> None:
         )
     )
 
-    button = ShopButton()
-    msg = await ctx.respond(embed=emb, components=button, flags=hikari.MessageFlag.EPHEMERAL)
-    await button.start(msg)
+    if list and id == None:
+        button = ShopButton()
+        msg = await ctx.respond(embed=emb, components=button, flags=hikari.MessageFlag.EPHEMERAL)
+        await button.start(msg)
+
+    if list == "Удочка":
+
+        if user["rod"] >= id:
+            await ctx.respond("У вас уже есть такая удочка или была в использовании")
+            return
+
+        if id <= 0:
+            await ctx.respond(123)
+
+        if id == 1:
+            if user["coin"] < 100:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        else:
+            await ctx.respond("такой удочки не существует")
 
 
 def load(client):
