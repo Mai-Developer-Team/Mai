@@ -21,7 +21,7 @@ version = "3.0.0.dev5"
 if debug == False:
     info = "INFO"
     token = token
-    status = "https://mai.shuoki.top/"
+    status = "https://maibot.xyz"
 else:
     info = "DEBUG"
     token = dev_token #yes
@@ -36,10 +36,11 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.basic.report",
-    "plugins.basic.pay_boost",
+    #"plugins.dev.pay_boost",
     "plugins.economic.work",
     "plugins.economic.profile",
     "plugins.economic.fishing",
+    "plugins.economic.shop",
     "plugins.reaction.reaction",
     "plugins.integration.bcinfo",
     "plugins.dev.ping",
