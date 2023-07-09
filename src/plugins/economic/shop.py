@@ -42,7 +42,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             emb = (
                 hikari.Embed(
                     title="Список доступных удочек",
-                    description="Ага",
+                    description="ID:1 **Палочка с веревкой** 100 :coin:",
                     color=setting.color
                 )
             )
@@ -57,7 +57,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             emb = (
                 hikari.Embed(
                     title="Список доступных крючков",
-                    description="Ага",
+                    description="ID:1 **Червяк** 250:coin:",
                     color=setting.color
                 )
             )
@@ -104,6 +104,7 @@ async def shop(ctx: lightbulb.Context) -> None:
 
         if id <= 0:
             await ctx.respond(123)
+            return
 
         if id == 1:
             if user["coin"] < 100:
@@ -121,6 +122,30 @@ async def shop(ctx: lightbulb.Context) -> None:
         else:
             await ctx.respond("такой удочки не существует")
 
+    if list == "Крючок":
+        if user["fish_hook"] >= id:
+            await ctx.respond("У вас уже есть такой крючок или был в использовании")
+            return
+
+        if id <= 0:
+            await ctx.respond(123)
+            return
+
+        if id == 1:
+            if user["coin"] < 250:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "fish_hook": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        else:
+            await ctx.respond("такого крючка не существует")
 
 def load(client):
     client.add_plugin(plugin)

@@ -12,10 +12,15 @@ plugin = lightbulb.Plugin("fishing", default_enabled_guilds=setting.guild_id)
 
 @plugin.command()
 @lightbulb.add_checks(access.disable_command)
+@lightbulb.add_cooldown(86400, 1, lightbulb.UserBucket)
 @lightbulb.command("fishing", "рыбалка наше все")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def fishing(ctx: lightbulb.Context) -> None:
     u = db.user(ctx.author.id)
+    level.add_xp(ctx.author.id)
+    change = random.randint(1, 10)
+
+    coins = db.db.user.find_one({"id": ctx.author.id})["coin"]
 
     if u["rod"] == None:
         await ctx.respond(
@@ -24,27 +29,44 @@ async def fishing(ctx: lightbulb.Context) -> None:
         )
         return
 
-    if u["rod"] == 0:
-        coin = random.randint(1, 3)
-
-    if u["fish_hook"] == None:
-        hook = 0
-        a = "d"
-
-    if u["fish_hook"] == 0:
-        change = random.randint(1, 9)
-
-        if change == 5:
-            hook = 0
-            a = "Ваш крючок потерялся в пучине озера"
-        else:
-            hook = random.randint(0, 1)
-            a = "Благодаря крючку da заработали дополнительно деньги"
+    if u["rod"] == 1:
+        fishcoin = random.randint(125, 150)
 
 
-    await ctx.respond(
-            f"Это тестовое сообщение для откладки\n Заработано {coin + hook} :coin:\n{a}"
-        )
+    emb = hikari.Embed(
+        title="Рыбалка",
+        description="Теперь можете сходить только через день",
+        color=setting.color
+    )
+    emb.add_field(
+        name="Вы заработали",
+        value=f"{fishcoin} :coin:"
+    )
+    if u["fish_hook"] != None:
+        if u["fish_hook"] == 1:
+            if change == 6:
+                fishhookcoin = 0
+                emb.add_field(
+                    name="Крючек",
+                    value="Ваш крючок потерялся в пучине озера"
+                )
+            else:
+                fishhookcoin = random.randint(12, 31)
+                emb.add_field(
+                    name="Крючек",
+                    value=f"Благодаря крючку заработали дополнительно {fishhookcoin} :coin:"
+                )
+
+    db.db.user.update_one(
+        {"id": ctx.author.id},
+        {
+            "$set": {
+                "coin": coins + fishcoin + fishhookcoin
+            }
+        }
+    )
+
+    await ctx.respond(embed=emb)
 
 def load(client):
     client.add_plugin(plugin)
