@@ -33,7 +33,6 @@ async def shop(ctx: lightbulb.Context) -> None:
     l = local.localization(ctx.get_guild().id)
     user = db.user(ctx.author.id)
     list = ctx.options.list
-    id = int(ctx.options.id)
 
     class ShopButton(miru.View):
 
@@ -91,12 +90,13 @@ async def shop(ctx: lightbulb.Context) -> None:
         )
     )
 
-    if list and id == None:
+    if list == None:
         button = ShopButton()
         msg = await ctx.respond(embed=emb, components=button, flags=hikari.MessageFlag.EPHEMERAL)
         await button.start(msg)
 
     if list == "Удочка":
+        id = int(ctx.options.id)
 
         if user["rod"] >= id:
             await ctx.respond("У вас уже есть такая удочка или была в использовании")
@@ -123,6 +123,8 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond("такой удочки не существует")
 
     if list == "Крючок":
+        id = int(ctx.options.id)
+
         if user["fish_hook"] >= id:
             await ctx.respond("У вас уже есть такой крючок или был в использовании")
             return
