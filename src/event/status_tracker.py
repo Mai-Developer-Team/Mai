@@ -24,7 +24,7 @@ async def started(event: hikari.StartedEvent):
 
 
 @plugin.listener(hikari.StartingEvent)
-async def starting(event: hikari.StoppingEvent):
+async def starting(event: hikari.StartingEvent):
 
     emb = hikari.Embed(
         title = "Бот подключился к Discord API",
@@ -41,7 +41,7 @@ async def starting(event: hikari.StoppingEvent):
 
 
 @plugin.listener(hikari.StoppedEvent)
-async def stopped(event: hikari.StoppingEvent):
+async def stopped(event: hikari.StoppedEvent):
 
     emb = hikari.Embed(
         title = "Бот отключился",

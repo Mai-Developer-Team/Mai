@@ -12,14 +12,16 @@ webhook_token_status = os.environ.get("WEBHOOK_TOKEN_STATUS")
 pynepcord_token = os.environ.get("PYNEPCORD")
 guild_id = [992117772521836674, 807900317823402004]
 mongodb_client = os.environ.get("MONGO")
+id_shop = os.environ.get("ID_SHOP")
+secret_key = os.environ.get("SECRET_KEY")
 
 debug = False
-version = "3.0.0.dev5"
+version = "3.0.0(CBT)"
 
 if debug == False:
     info = "INFO"
     token = token
-    status = "https://mai.shuoki.top/"
+    status = "https://maibot.xyz"
 else:
     info = "DEBUG"
     token = dev_token #yes
@@ -34,10 +36,13 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.basic.report",
+    #"plugins.dev.pay_boost",
     "plugins.economic.work",
     "plugins.economic.profile",
+    "plugins.economic.fishing",
+    "plugins.economic.shop",
     "plugins.reaction.reaction",
-    "plugins.integration.bcinfo",
+    #"plugins.integration.bcinfo",
     "plugins.dev.ping",
     "plugins.dev.eval",
     "plugins.dev.boost",
@@ -46,7 +51,7 @@ plugins = [
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
     "event.error",
-    #"event.shard_tracker",
-    #"event.status_tracker"
+    "event.shard_tracker",
+    "event.status_tracker"
 ]
 
