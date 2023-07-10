@@ -15,7 +15,7 @@ mongodb_client = os.environ.get("MONGO")
 id_shop = os.environ.get("ID_SHOP")
 secret_key = os.environ.get("SECRET_KEY")
 
-debug = False
+debug = True
 version = "3.0.0(CBT)"
 
 if debug == False:
@@ -50,8 +50,8 @@ plugins = [
     #"plugins.dev.play",
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
-    "event.error",
-    "event.shard_tracker",
-    "event.status_tracker"
+    #"event.error",
+    #"event.shard_tracker",
+    #"event.status_tracker"
 ]
 

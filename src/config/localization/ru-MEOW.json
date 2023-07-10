@@ -87,7 +87,7 @@
    "fishing.rod.id.None": "Отсутсвует",
    "fishing.rod.id.0": "dev_rod",
    "fishing.rod.id.1": "Палочка с веревкой",
-   "fishing.fish_hook.id.None": "Отсутсвуют",
+   "fishing.fish_hook.id.None": "Отсутсвует",
    "fishing.fish_hook.id.0": "dev_fish_hook",
    "fishing.fish_hook.id.1": "Червяк",
 
@@ -97,6 +97,6 @@
 
    "error.CommandInvocationError": "<:bonchi_error:1086704118975963268> Произошла критическая ошибка в команде! Если ничего не измениться, то обратитесь на сервер поддержки",
    "error.CheckFailure": "<:bonchi_error:1086704118975963268> Возможные причины ошибки:\n`[1]`У вас закончился буст на сервере\n`[2]`Вы не являетесь альфа-тестером\n`[3]`На сервере выключены экономические команды",
-   "error.MissingRequiredPermission": "<:bonchi_error:1086704118975963268> У вас нету необходимых правил для использовании данной команды",
+   "error.MissingRequiredPermission": "<:bonchi_error:1086704118975963268> У вас нету необходимых прав использовании данной команды",
    "error.CommandIsOnCooldown": "<:bonchi_error:1086704118975963268> У данной команды есть время отката! Попробуйте в <t:{}:F>"
 }
