@@ -19,6 +19,7 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
             l["error.CommandInvocationError"],
             flags=hikari.MessageFlag.EPHEMERAL
             )
+        await event.context.command.cooldown_manager.reset_cooldown(event.context)
         return
     if isinstance(event.exception, lightbulb.NotOwner):
         await event.context.respond(

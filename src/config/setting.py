@@ -49,7 +49,7 @@ plugins = [
     #"plugins.dev.play",
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
-    #"event.error",
+    "event.error",
     #"event.shard_tracker",
     #"event.status_tracker"
 ]
