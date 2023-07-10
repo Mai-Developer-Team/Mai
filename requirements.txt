@@ -8,5 +8,4 @@ python-dotenv==1.0.0
 requests==2.29.0
 pymongo==4.3.3
 dnspython==2.3.0
-pynepcord
 yookassa
