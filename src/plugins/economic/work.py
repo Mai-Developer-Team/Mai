@@ -18,7 +18,6 @@ async def work(ctx: lightbulb.Context) -> None:
     l = local.localization(ctx.get_guild().id)
     level.add_xp(ctx.author.id)
 
-    #TODO: поменять после обт
     if db.premium(ctx.author.id) == None:
         coin = random.randint(350, 400)
         if random.randint(1, 1000) == 250:

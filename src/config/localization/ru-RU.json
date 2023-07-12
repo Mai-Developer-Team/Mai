@@ -84,6 +84,13 @@
    "profile.rod": "Удочка",
    "profile.fishhook": "Крючок",
 
+   "fishing.none_rod": "У вас нету удочки, чтобы порыбачить",
+   "fishing.title": "Рыбалка",
+   "fishing.description": "Теперь можете сходить только через день",
+   "fishing.field.rod_money": "Вы заработали",
+   "fishing.name.fish_hook": "Крючок",
+   "fishing.fish_hook.err": "Ваш крючок потерялся в пучине озера",
+   "fishing.fish_hook.ok": "Благодаря крючку заработали дополнительно {} :coin:",
    "fishing.rod.id.None": "Отсутсвует",
    "fishing.rod.id.0": "dev_rod",
    "fishing.rod.id.1": "Палочка с веревкой",
