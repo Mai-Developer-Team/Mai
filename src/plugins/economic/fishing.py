@@ -50,6 +50,14 @@ async def fishing(ctx: lightbulb.Context) -> None:
                     name="Крючек",
                     value="Ваш крючок потерялся в пучине озера"
                 )
+                db.db.user.update_one(
+                    {"id": ctx.author.id},
+                    {
+                        "$set": {
+                            "fish_hook": None
+                        }
+                    }
+                )
             else:
                 fishhookcoin = random.randint(12, 31)
                 emb.add_field(

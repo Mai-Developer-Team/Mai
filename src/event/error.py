@@ -19,7 +19,19 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
             l["error.CommandInvocationError"],
             flags=hikari.MessageFlag.EPHEMERAL
             )
-        await event.context.command.cooldown_manager.reset_cooldown(event.context)
+        if event.context.command.cooldown_manager != None:
+            await event.context.command.cooldown_manager.reset_cooldown(event.context)
+
+        thread = await event.bot.rest.create_thread(
+            1053706633487859722,
+            11,
+            f"Ошибка в команде {event.context.command.name}",
+            reason="Отчет по ошибке"
+        )
+        await thread.send(
+            f"<@&890683001065848842>\nИспользовал её **{event.context.member}** в гильдии `{event.context.get_guild().name}`|`{event.context.get_guild().id}`\nОшибка ```python\n{type(event.exception.__cause__).__name__}: {event.exception.__cause__}```",
+            role_mentions = True
+        )
         return
     if isinstance(event.exception, lightbulb.NotOwner):
         await event.context.respond(
@@ -48,20 +60,6 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return
-
-    #логи
-    if isinstance(event.exception, (lightbulb.CommandInvocationError)):
-        thread = await event.bot.rest.create_thread(
-            1053706633487859722,
-            11,
-            f"Ошибка в команде {event.context.command.name}",
-            auto_archive_duration=1,
-            reason="Отчет по ошибке"
-        )
-        await thread.send(
-            f"<@&890683001065848842>\nИспользовал её **{event.context.member}** в гильдии `{event.context.get_guild().name}`|`{event.context.get_guild().id}`\nОшибка ```python\n{type(event.exception.__cause__).__name__}: {event.exception.__cause__}```",
-            role_mentions = True
-        )
 
 def load(client):
     client.add_plugin(plugin)

@@ -108,7 +108,111 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
 
         if id == 1:
-            if user["coin"] < 100:
+            if user["coin"] < 900:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 2:
+            if user["coin"] <= 2000:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 3:
+            if user["coin"] <= 4500:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 4:
+            if user["coin"] <= 7800:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 5:
+            if user["coin"] <= 11000:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 6:
+            if user["coin"] <= 16500:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 7:
+            if user["coin"] <= 20000:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 8:
+            if user["coin"] <= 27000:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "rod": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 9:
+            if user["coin"] <= 40000:
                 await ctx.respond("У вас нет денег на покупку F")
                 return
 
@@ -135,7 +239,72 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
 
         if id == 1:
-            if user["coin"] < 250:
+            if user["coin"] <= 250:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "fish_hook": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 2:
+            if user["coin"] <= 500:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "fish_hook": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 3:
+            if user["coin"] <= 1250:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "fish_hook": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 4:
+            if user["coin"] <= 2500:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "fish_hook": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 5:
+            if user["coin"] <= 3600:
+                await ctx.respond("У вас нет денег на покупку F")
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "fish_hook": id
+                }}
+            )
+
+            await ctx.respond("Благодарим за покупку")
+        if id == 6:
+            if user["macoin"] <= 25:
                 await ctx.respond("У вас нет денег на покупку F")
                 return
 
