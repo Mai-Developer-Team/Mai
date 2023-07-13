@@ -81,7 +81,7 @@ async def fishing(ctx: lightbulb.Context) -> None:
                     value=l["fishing.name.fish_hook"].format(fishhookcoin)
                 )
         if u["fish_hook"] == 2:
-            if change == 6:
+            if change == 2:
                 fishhookcoin = 0
                 emb.add_field(
                     name=l["fishing.name.fish_hook"],
@@ -102,7 +102,7 @@ async def fishing(ctx: lightbulb.Context) -> None:
                     value=l["fishing.name.fish_hook"].format(fishhookcoin)
                 )
         if u["fish_hook"] == 3:
-            if change == 6:
+            if change == 9:
                 fishhookcoin = 0
                 emb.add_field(
                     name=l["fishing.name.fish_hook"],
@@ -123,7 +123,7 @@ async def fishing(ctx: lightbulb.Context) -> None:
                     value=l["fishing.name.fish_hook"].format(fishhookcoin)
                 )
         if u["fish_hook"] == 4:
-            if change == 6:
+            if change == 1:
                 fishhookcoin = 0
                 emb.add_field(
                     name=l["fishing.name.fish_hook"],
@@ -144,7 +144,7 @@ async def fishing(ctx: lightbulb.Context) -> None:
                     value=l["fishing.name.fish_hook"].format(fishhookcoin)
                 )
         if u["fish_hook"] == 5:
-            if change == 6:
+            if change == 3:
                 fishhookcoin = 0
                 emb.add_field(
                     name=l["fishing.name.fish_hook"],
@@ -165,7 +165,7 @@ async def fishing(ctx: lightbulb.Context) -> None:
                     value=l["fishing.name.fish_hook"].format(fishhookcoin)
                 )
         if u["fish_hook"] == 6:
-            if change == 6:
+            if change == 10:
                 fishhookcoin = 0
                 emb.add_field(
                     name=l["fishing.name.fish_hook"],

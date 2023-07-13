@@ -121,7 +121,7 @@
    "shop.description.banner": "Весь список баннеров находиться [здесь](https://boticord.gay)",
    "shop.buy.pay.0": "Нельзя покупать с отрицательным ID и 0",
    "shop.buy.pay.false": "Вам не хватает на покупку {}",
-   "shop.buy.pay.done": "Благодарим за покупку",
+   "shop.buy.pay.done": "Благодарим за покупку **{}**",
    "shop.buy.rod.none": "Такой удочки не существует",
    "shop.buy.fish_hook.none": "Такого крючка не существует",
    "shop.buy.rod.was": "У вас уже есть такая удочка или была в использовании",

@@ -19,7 +19,7 @@ def user(id):
                 "premium": {
                     "guild_add_premium": None
                 },
-                "nothing": False,
+                "nothing": True,
                 "badge": None,
                 "bio": None,
                 "xp": 0,

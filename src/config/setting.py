@@ -11,6 +11,7 @@ webhook_token_shard = os.environ.get("WEBHOOK_TOKEN_SHARD")
 webhook_token_status = os.environ.get("WEBHOOK_TOKEN_STATUS")
 guild_id = [992117772521836674, 807900317823402004, 833880841976938576]
 mongodb_client = os.environ.get("MONGO")
+bc_api = os.environ.get("BC_API")
 id_shop = os.environ.get("ID_SHOP")
 secret_key = os.environ.get("SECRET_KEY")
 
@@ -50,6 +51,7 @@ plugins = [
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
     "event.error",
+    "event.bc_notify"
     #"event.shard_tracker",
     #"event.status_tracker"
 ]

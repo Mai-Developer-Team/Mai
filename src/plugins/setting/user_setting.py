@@ -88,7 +88,7 @@ class UserSettingButton(miru.View):
 
         emb = hikari.Embed(
             title="Настройки оповещения",
-            description="Оповещения нужны для **получения буста, об заходе человека из черного списка и успешном апе на BotiCord**. Изначально они выключены, но рекомендуем включить",
+            description="Оповещения нужны для **получения буста, об заходе человека из черного списка и успешном апе на BotiCord**",
             color=setting.color
         )
         emb.set_footer(

@@ -136,7 +136,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.1"]))
             return
         if id == 2:
             if user["coin"] <= 2000:
@@ -150,7 +150,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.2"]))
             return
         if id == 3:
             if user["coin"] <= 4500:
@@ -164,7 +164,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond("Благодарим за покупку")
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.3"]))
             return
         if id == 4:
             if user["coin"] <= 7800:
@@ -178,7 +178,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.4"]))
             return
         if id == 5:
             if user["coin"] <= 11000:
@@ -192,7 +192,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.5"]))
             return
         if id == 6:
             if user["coin"] <= 16500:
@@ -206,7 +206,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.6"]))
             return
         if id == 7:
             if user["coin"] <= 20000:
@@ -220,7 +220,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.7"]))
             return
         if id == 8:
             if user["coin"] <= 27000:
@@ -234,7 +234,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.8"]))
             return
         if id == 9:
             if user["coin"] <= 40000:
@@ -248,7 +248,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.9"]))
             return
         else:
             await ctx.respond(l["shop.buy.rod.none"], flags=hikari.MessageFlag.EPHEMERAL)
@@ -276,7 +276,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.1"]))
             return
         if id == 2:
             if user["coin"] <= 500:
@@ -290,7 +290,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.2"]))
             return
         if id == 3:
             if user["coin"] <= 1250:
@@ -304,7 +304,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.3"]))
             return
         if id == 4:
             if user["coin"] <= 2500:
@@ -318,7 +318,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.4"]))
             return
         if id == 5:
             if user["coin"] <= 3600:
@@ -332,7 +332,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.5"]))
             return
         if id == 6:
             if user["macoin"] <= 25:
@@ -346,7 +346,7 @@ async def shop(ctx: lightbulb.Context) -> None:
                 }}
             )
 
-            await ctx.respond(l["shop.buy.pay.done"])
+            await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.6"]))
             return
         else:
             await ctx.respond(l["shop.buy.fish_hook.none"], flags=hikari.MessageFlag.EPHEMERAL)
