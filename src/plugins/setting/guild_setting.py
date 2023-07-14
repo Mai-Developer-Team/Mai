@@ -9,12 +9,6 @@ from utils import local, db
 plugin = lightbulb.Plugin("guild_setting", default_enabled_guilds=setting.guild_id)
 
 
-class ServerSettingButton(miru.View):
-    
-    @miru.button(label="a", style=hikari.ButtonStyle.PRIMARY)
-    async def logs_setting(self, button: miru.Button, ctx: miru.ViewContext):
-        await ctx.respond(1)
-
 @plugin.command()
 @lightbulb.add_checks(
     lightbulb.has_role_permissions(hikari.Permissions.MANAGE_GUILD)
@@ -38,9 +32,8 @@ async def guild_setting(ctx: lightbulb.Context) -> None:
 
     emb.set_thumbnail(ctx.get_guild().icon_url)
 
-    #button = ServerSettingButton()
     await ctx.respond(embed=emb)
-    #await button.start(msg)
+
 
 def load(client):
     client.add_plugin(plugin)

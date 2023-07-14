@@ -1,4 +1,3 @@
-#DEV TEST
 import lightbulb
 import hikari
 
@@ -16,6 +15,7 @@ plugin = lightbulb.Plugin("fishing", default_enabled_guilds=setting.guild_id)
 @lightbulb.command("fishing", "рыбалка наше все")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def fishing(ctx: lightbulb.Context) -> None:
+    l = local.localization(ctx.get_guild().id)
     u = db.user(ctx.author.id)
     level.add_xp(ctx.author.id)
     change = random.randint(1, 10)
@@ -24,22 +24,38 @@ async def fishing(ctx: lightbulb.Context) -> None:
 
     if u["rod"] == None:
         await ctx.respond(
-            "У вас нету удочки, чтобы порыбачить",
+            l["fishing.none_rod"],
             flags=hikari.MessageFlag.EPHEMERAL
         )
         return
 
     if u["rod"] == 1:
-        fishcoin = random.randint(125, 150)
+        fishcoin = random.randint(225, 300)
+    if u["rod"] == 2:
+        fishcoin = random.randint(400, 653)
+    if u["rod"] == 3:
+        fishcoin = random.randint(700, 920)
+    if u["rod"] == 4:
+        fishcoin = random.randint(1000, 1220)
+    if u["rod"] == 5:
+        fishcoin = random.randint(1300, 1450)
+    if u["rod"] == 6:
+        fishcoin = random.randint(1500, 1700)
+    if u["rod"] == 7:
+        fishcoin = random.randint(2000, 2300)
+    if u["rod"] == 8:
+        fishcoin = random.randint(2350, 2600)
+    if u["rod"] == 9:
+        fishcoin = random.randint(3000, 4000)
 
 
     emb = hikari.Embed(
-        title="Рыбалка",
-        description="Теперь можете сходить только через день",
+        title=l["fishing.title"],
+        description=l["fishing.description"],
         color=setting.color
     )
     emb.add_field(
-        name="Вы заработали",
+        name=l["fishing.field.rod_money"],
         value=f"{fishcoin} :coin:"
     )
     if u["fish_hook"] != None:
@@ -47,14 +63,127 @@ async def fishing(ctx: lightbulb.Context) -> None:
             if change == 6:
                 fishhookcoin = 0
                 emb.add_field(
-                    name="Крючек",
-                    value="Ваш крючок потерялся в пучине озера"
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.fish_hook.err"]
+                )
+                db.db.user.update_one(
+                    {"id": ctx.author.id},
+                    {
+                        "$set": {
+                            "fish_hook": None
+                        }
+                    }
                 )
             else:
-                fishhookcoin = random.randint(12, 31)
+                fishhookcoin = random.randint(25, 40)
                 emb.add_field(
-                    name="Крючек",
-                    value=f"Благодаря крючку заработали дополнительно {fishhookcoin} :coin:"
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.name.fish_hook"].format(fishhookcoin)
+                )
+        if u["fish_hook"] == 2:
+            if change == 2:
+                fishhookcoin = 0
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.fish_hook.err"]
+                )
+                db.db.user.update_one(
+                    {"id": ctx.author.id},
+                    {
+                        "$set": {
+                            "fish_hook": None
+                        }
+                    }
+                )
+            else:
+                fishhookcoin = random.randint(50, 75)
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.name.fish_hook"].format(fishhookcoin)
+                )
+        if u["fish_hook"] == 3:
+            if change == 9:
+                fishhookcoin = 0
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.fish_hook.err"]
+                )
+                db.db.user.update_one(
+                    {"id": ctx.author.id},
+                    {
+                        "$set": {
+                            "fish_hook": None
+                        }
+                    }
+                )
+            else:
+                fishhookcoin = random.randint(80, 95)
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.name.fish_hook"].format(fishhookcoin)
+                )
+        if u["fish_hook"] == 4:
+            if change == 1:
+                fishhookcoin = 0
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.fish_hook.err"]
+                )
+                db.db.user.update_one(
+                    {"id": ctx.author.id},
+                    {
+                        "$set": {
+                            "fish_hook": None
+                        }
+                    }
+                )
+            else:
+                fishhookcoin = random.randint(125, 200)
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.name.fish_hook"].format(fishhookcoin)
+                )
+        if u["fish_hook"] == 5:
+            if change == 3:
+                fishhookcoin = 0
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.fish_hook.err"]
+                )
+                db.db.user.update_one(
+                    {"id": ctx.author.id},
+                    {
+                        "$set": {
+                            "fish_hook": None
+                        }
+                    }
+                )
+            else:
+                fishhookcoin = random.randint(300, 350)
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.name.fish_hook"].format(fishhookcoin)
+                )
+        if u["fish_hook"] == 6:
+            if change == 10:
+                fishhookcoin = 0
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.fish_hook.err"]
+                )
+                db.db.user.update_one(
+                    {"id": ctx.author.id},
+                    {
+                        "$set": {
+                            "fish_hook": None
+                        }
+                    }
+                )
+            else:
+                fishhookcoin = random.randint(500, 600)
+                emb.add_field(
+                    name=l["fishing.name.fish_hook"],
+                    value=l["fishing.name.fish_hook"].format(fishhookcoin)
                 )
 
     db.db.user.update_one(
