@@ -9,7 +9,7 @@
    "userinfo.badge": "Значки",
    "userinfo.bio": "О коте",
    "userinfo.premium": "Подписка",
-   "userinfo.premium.message": "Подписка действует до **{}**",
+   "userinfo.premium.message": "Подписка мурчит до **{}**",
    "userinfo.block": ":warning: Мяу!",
    "userinfo.block.reason": "Данный кот находится в черной коробке по причине:\n**{}**",
 
@@ -42,10 +42,10 @@
    "serverinfo.verify_server.HIGH": "Выш",
    "serverinfo.verify_server.VERY_HIGH": "Выше",
 
-   "help.command_category.reaction": "Реакции",
+   "help.command_category.reaction": "Мякции",
 
-   "reaction.error": "Нельзя использовать реакции на себя!",
-   "reaction.hug.title": ">W<",
+   "reaction.error": "Нельзя использовать мякции на себя!",
+   "reaction.hug.title": ">w<",
    "reaction.hug.description": "{} обнял(а) в сильных объятиях {}",
    "reaction.poke.title": "МЯУ",
    "reaction.poke.description": "{} тыкнул(а) {}",
@@ -55,16 +55,16 @@
    "reaction.pat.description": "{} погладил(а), как котёнка {}",
    "reaction.happy.title": ">W<",
    "reaction.happy.description": "{} веселится вместе {}",
-   "reaction.cry.title": ":C",
+   "reaction.cry.title": ":С",
    "reaction.cry.description": "{} грустит вместе с {}",
-   "reaction.slap.title": "МЯУ!!!",
-   "reaction.slap.description": "{} ударил(а) {}",
+   "reaction.slap.title": "Какой сильный мядар",
+   "reaction.slap.description": "{} мядарил(а) {}",
 
-   "report.error.author": "Вы не можете подать на себя жалобу",
-   "report.error.blauthor": "Вы находитесь в черном списке бота, поэтому не можете отправлять жалобы на других пользователей",
-   "report.error.blmember": "Данный пользователь уже был наказан",
-   "report.access": "Спасибо за жалобу, мы в скором времени её рассмотрим!",
-   "report.access.db": "На данного пользователя уже был отправлена жалоба",
+   "report.error.author": "Кот не можете подать на жалобу на кота",
+   "report.error.blauthor": "Вы находитесь в черном списке мята, поэтому не можете отправлять мявки на других котов",
+   "report.error.blmember": "Данный кот был наказан",
+   "report.access": "Спасибо за мявок, мы в скором времени её размурчим!",
+   "report.access.db": "На данного кота была отправлен мявок",
 
    "help.command_category.setting": "Шерсть",
 
@@ -76,7 +76,7 @@
    "work.coin": "Наспали",
    "work.macoin": "Вы намечтали дополнительную награду",
 
-   "profile.title": "Профиль @{}",
+   "profile.title": "Кот @{}",
    "profile.balance.coin": "Баланс",
    "profile.balance.macoin": "Макойны",
    "profile.lvl": "Уровень/XP",
