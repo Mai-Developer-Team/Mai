@@ -15,7 +15,7 @@ async def up_added(data):
     user = data['user']
     resource = data['id']
 
-    if resource == 802987390033330227:
+    if resource == "802987390033330227":
         d = db.user(user)
 
         if d["notify"] != False:

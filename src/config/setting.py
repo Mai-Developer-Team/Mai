@@ -15,7 +15,7 @@ bc_api = os.environ.get("BC_API")
 id_shop = os.environ.get("ID_SHOP")
 secret_key = os.environ.get("SECRET_KEY")
 
-debug = True
+debug = False
 version = "3.0.0(CBT)"
 
 if debug == False:
@@ -51,8 +51,8 @@ plugins = [
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
     "event.error",
-    "event.bc_notify"
-    #"event.shard_tracker",
-    #"event.status_tracker"
+    "event.bc_notify",
+    "event.shard_tracker",
+    "event.status_tracker"
 ]
 
