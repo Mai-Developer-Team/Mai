@@ -108,6 +108,7 @@ async def shop(ctx: lightbulb.Context) -> None:
     )
 
     if list == None and ctx.options.id == None:
+
         button = ShopButton()
         msg = await ctx.respond(embed=emb, components=button, flags=hikari.MessageFlag.EPHEMERAL)
         await button.start(msg)
