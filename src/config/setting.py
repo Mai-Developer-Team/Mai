@@ -51,7 +51,7 @@ plugins = [
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
     "event.error",
-    #"event.bc_notify",
+    "event.bc_notify",
     #"event.shard_tracker",
     #"event.status_tracker"
 ]
