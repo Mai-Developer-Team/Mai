@@ -14,7 +14,7 @@ plugin = lightbulb.Plugin("profile")
 async def profile(ctx: lightbulb.Context) -> None:
     l = local.localization(ctx.get_guild().id)
     d = db.user(ctx.author.id)
-    a = level.display_lvl(ctx.author.id)
+    #a = level.display_lvl(ctx.author.id)
 
     emb = hikari.Embed(
         title = l["profile.title"].format(ctx.author),
@@ -22,7 +22,7 @@ async def profile(ctx: lightbulb.Context) -> None:
     )
     emb.add_field(name = l["profile.balance.coin"], value=f'{d["coin"]} :coin:', inline=True)
     emb.add_field(name = l["profile.balance.macoin"], value=f'{d["macoin"]} :star:', inline=True)
-    emb.add_field(name = l["profile.lvl"], value=l["profile.lvl.display"].format(a, d["xp"]))
+    #emb.add_field(name = l["profile.lvl"], value=l["profile.lvl.display"].format(a, d["xp"]))
     emb.add_field(name = l["profile.rod"], value=l[f"fishing.rod.id.{d['rod']}"], inline=True)
     emb.add_field(name = l["profile.fishhook"], value=l[f"fishing.fish_hook.id.{d['fish_hook']}"], inline=True)
     emb.set_thumbnail(ctx.author.avatar_url)
