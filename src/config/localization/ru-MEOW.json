@@ -118,7 +118,7 @@
    "shop.title.fish_hook": "Список доступных крючков",
    "shop.description.fish_hook": "ID:1 **{}** 250 :coin:\nID:2 **{}** 500 :coin:\nID:3 **{}** 1250 :coin:\nID:4 **{}** 2500 :coin:\nID:5 **{}** 3600 :coin:\nID:6 **{}** 25 :star:\n",
    "shop.title.banner": "Список доступных баннеров",
-   "shop.description.banner": "Весь список баннеров находиться [здесь](https://boticord.gay)",
+   "shop.description.banner": "Весь список баннеров находиться [здесь](https://docs.maibot.xyz/экономика/магазин/#_4)",
    "shop.buy.pay.0": "Нельзя покупать с отрицательным ID и 0",
    "shop.buy.pay.false": "Вам не хватает на покупку {}",
    "shop.buy.pay.done": "Благодарим за покупку **{}**",

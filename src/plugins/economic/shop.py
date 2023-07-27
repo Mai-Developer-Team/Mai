@@ -5,7 +5,7 @@ import miru
 from config import setting
 from utils import local, access, db
 
-plugin = lightbulb.Plugin("shop", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("shop")
 
 
 @plugin.command()

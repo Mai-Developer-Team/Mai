@@ -6,7 +6,7 @@ from boticordpy import BotiCordWebsocket
 from config import setting
 from utils import db
 
-plugin = lightbulb.Plugin("bc_notify", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("bc_notify")
 websocket = BotiCordWebsocket(setting.bc_api)
 
 

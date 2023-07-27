@@ -4,7 +4,7 @@ import hikari
 from config import setting
 from utils import local
 
-plugin = lightbulb.Plugin("custom_help", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("custom_help")
 
 
 @plugin.command()

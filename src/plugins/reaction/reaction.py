@@ -5,7 +5,7 @@ from config import setting
 from utils import local
 from . import api_reaction
 
-plugin = lightbulb.Plugin("reaction", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("reaction")
 
 
 @plugin.command()

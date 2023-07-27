@@ -6,7 +6,7 @@ from config import setting
 from utils import local
 
 
-plugin = lightbulb.Plugin("stats", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("stats")
 date = datetime.utcnow().replace(tzinfo=timezone.utc)
 
 @plugin.command()
