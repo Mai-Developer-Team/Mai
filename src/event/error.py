@@ -6,7 +6,7 @@ import datetime, time
 from config import setting
 from utils import local
 
-plugin = lightbulb.Plugin("error", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("error")
 
 
 @plugin.listener(lightbulb.CommandErrorEvent)

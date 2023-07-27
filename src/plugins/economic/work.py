@@ -6,7 +6,7 @@ from utils import local, access, db, level
 
 import random
 
-plugin = lightbulb.Plugin("work", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("work")
 
 
 @plugin.command()

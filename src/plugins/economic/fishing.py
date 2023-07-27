@@ -6,7 +6,7 @@ import random
 from config import setting
 from utils import local, access, level, db
 
-plugin = lightbulb.Plugin("fishing", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("fishing")
 
 
 @plugin.command()

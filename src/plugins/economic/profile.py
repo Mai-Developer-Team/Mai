@@ -4,7 +4,7 @@ import hikari
 from config import setting
 from utils import local, access, db, level
 
-plugin = lightbulb.Plugin("profile", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("profile")
 
 
 @plugin.command()

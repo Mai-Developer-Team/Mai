@@ -5,10 +5,12 @@ import miru
 from config import setting
 from utils import local, db
 
-plugin = lightbulb.Plugin("report", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("report")
 
 
 class ReportButton(miru.View):
+    def __init__(self) -> None:
+        super().__init__(timeout=None)
 
     @miru.button(label="принять", style=hikari.ButtonStyle.SUCCESS)
     async def success_button(self, button: miru.Button, ctx: miru.ViewContext):

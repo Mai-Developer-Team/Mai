@@ -5,7 +5,7 @@ import miru
 from config import setting
 from utils import local, access, db
 
-plugin = lightbulb.Plugin("shop", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("shop")
 
 
 @plugin.command()
@@ -136,6 +136,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "rod": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 900-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.1"]))
             return
@@ -148,6 +154,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                 {"id": ctx.author.id},
                 {"$set": {
                     "rod": id
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 2000-user["coin"]
                 }}
             )
 
@@ -164,6 +176,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "rod": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 4500-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.3"]))
             return
@@ -176,6 +194,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                 {"id": ctx.author.id},
                 {"$set": {
                     "rod": id
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 7800-user["coin"]
                 }}
             )
 
@@ -192,6 +216,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "rod": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 11000-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.5"]))
             return
@@ -204,6 +234,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                 {"id": ctx.author.id},
                 {"$set": {
                     "rod": id
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 16500-user["coin"]
                 }}
             )
 
@@ -220,6 +256,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "rod": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 20000-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.7"]))
             return
@@ -234,6 +276,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "rod": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 27000-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.8"]))
             return
@@ -246,6 +294,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                 {"id": ctx.author.id},
                 {"$set": {
                     "rod": id
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 40000-user["coin"]
                 }}
             )
 
@@ -276,6 +330,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "fish_hook": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 250-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.1"]))
             return
@@ -288,6 +348,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                 {"id": ctx.author.id},
                 {"$set": {
                     "fish_hook": id
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 500-user["coin"]
                 }}
             )
 
@@ -304,6 +370,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "fish_hook": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 1250-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.3"]))
             return
@@ -316,6 +388,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                 {"id": ctx.author.id},
                 {"$set": {
                     "fish_hook": id
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 2500-user["coin"]
                 }}
             )
 
@@ -332,6 +410,12 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "fish_hook": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "coin": 3600-user["coin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.5"]))
             return
@@ -346,11 +430,145 @@ async def shop(ctx: lightbulb.Context) -> None:
                     "fish_hook": id
                 }}
             )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "macoin": 25-user["macoin"]
+                }}
+            )
 
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.6"]))
             return
         else:
             await ctx.respond(l["shop.buy.fish_hook.none"], flags=hikari.MessageFlag.EPHEMERAL)
+    if list == "Баннер":
+        id = int(ctx.options.id)
+
+
+        if id <= 0:
+            await ctx.respond(l["shop.buy.pay.0"], flags=hikari.MessageFlag.EPHEMERAL)
+            return
+
+        if id == 1:
+            if user["macoin"] <= 10:
+                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(10-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "banner": "https://cdn.discordapp.com/attachments/924028786230558760/924028917097070632/imgprofile1.jpg"
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "macoin": 10-user["macoin"]
+                }}
+            )
+
+            await ctx.respond(l["shop.buy.pay.done"].format("AnimeTyan"))
+            return
+        if id == 2:
+            if user["macoin"] <= 15:
+                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(15-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "banner": "https://cdn.discordapp.com/attachments/924028786230558760/924028930120351794/d61b7c8da267a2383b1311bafb6d3504.jpg"
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "macoin": 15-user["macoin"]
+                }}
+            )
+
+            await ctx.respond(l["shop.buy.pay.done"].format("Сhupachups"))
+            return
+        if id == 3:
+            if user["macoin"] <= 23:
+                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(23-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "banner": "https://cdn.discordapp.com/attachments/924028786230558760/924028943445676072/b046a64d-c6c5-4dac-8a59-c84280dd392b.jpeg"
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "macoin": 23-user["macoin"]
+                }}
+            )
+
+            await ctx.respond(l["shop.buy.pay.done"].format("cipherka"))
+            return
+        if id == 4:
+            if user["macoin"] <= 30:
+                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(30-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "banner": "https://cdn.discordapp.com/attachments/924028786230558760/924271960777703425/2e0bd710d8d57854.jpeg"
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "macoin": 30-user["macoin"]
+                }}
+            )
+
+            await ctx.respond(l["shop.buy.pay.done"].format("swd"))
+            return
+        if id == 5:
+            if user["macoin"] <= 38:
+                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(38-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "banner": "https://cdn.discordapp.com/attachments/924028786230558760/924271989756166174/95bc3120645b2aa157fb280d619a7181.png"
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "macoin": 38-user["macoin"]
+                }}
+            )
+
+            await ctx.respond(l["shop.buy.pay.done"].format("UwU"))
+            return
+        if id == 6:
+            if user["macoin"] <= 45:
+                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(45-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                return
+
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "banner": "https://cdn.discordapp.com/attachments/924028786230558760/991021071807447060/MaseroRoses.png"
+                }}
+            )
+            db.db.user.update_one(
+                {"id": ctx.author.id},
+                {"$set": {
+                    "macoin": 45-user["macoin"]
+                }}
+            )
+
+            await ctx.respond(l["shop.buy.pay.done"].format("Roses"))
+            return
 
 def load(client):
     client.add_plugin(plugin)

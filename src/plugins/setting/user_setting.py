@@ -7,7 +7,7 @@ import datetime
 from config import setting
 from utils import db
 
-plugin = lightbulb.Plugin("user_setting", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("user_setting")
 
 
 class UserSettingModal(miru.Modal):

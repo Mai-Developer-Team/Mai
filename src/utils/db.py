@@ -34,6 +34,7 @@ def user(id):
                 }
             }
         )
+        return db.user.find_one({"id": id})
     else:
         return db.user.find_one({"id": id})
 
@@ -62,6 +63,7 @@ def server(id):
                 "blockSettings": False
             }
         )
+        return db.server.find_one({"id": id})
     else:
         return db.server.find_one({"id": id})
 

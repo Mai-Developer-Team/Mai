@@ -7,7 +7,7 @@ from utils import local, db
 import datetime
 
 
-plugin = lightbulb.Plugin("userinfo", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("userinfo")
 
 
 @plugin.command()

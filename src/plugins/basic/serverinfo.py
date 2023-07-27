@@ -5,7 +5,7 @@ from config import setting
 from utils import local
 
 
-plugin = lightbulb.Plugin("serverinfo", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("serverinfo")
 
 
 @plugin.command()

@@ -6,7 +6,7 @@ from boticordpy import BotiCordWebsocket
 from config import setting
 from utils import db
 
-plugin = lightbulb.Plugin("bc_notify", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("bc_notify")
 websocket = BotiCordWebsocket(setting.bc_api)
 
 
@@ -18,7 +18,7 @@ async def up_added(data):
     if resource == "802987390033330227":
         d = db.user(user)
 
-        if d["notify"] != False:
+        if d["nothing"] != False:
             db.db.user.update_one(
                 {"id": user},
                 {
@@ -30,7 +30,7 @@ async def up_added(data):
 
             us = await plugin.bot.rest.fetch_user(user)
 
-            await us.send("<:boticord:1129078945506152501> Благодарим за ап Маи! Ваша награда 800 :coin:")
+            await us.send("<:boticord:1129078945506152501> Благодарим за ап! Ваша награда 800 :coin:")
 
 
 @plugin.listener(hikari.StartedEvent)

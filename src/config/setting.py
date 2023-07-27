@@ -16,12 +16,12 @@ id_shop = os.environ.get("ID_SHOP")
 secret_key = os.environ.get("SECRET_KEY")
 
 debug = False
-version = "3.0.0(CBT)"
+version = "3.0.0"
 
 if debug == False:
     info = "INFO"
     token = token
-    status = "https://maibot.xyz"
+    status = "https://docs.maibot.xyz"
 else:
     info = "DEBUG"
     token = dev_token #yes
