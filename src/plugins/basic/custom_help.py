@@ -18,11 +18,19 @@ async def help(ctx: lightbulb.Context) -> None:
         hikari.Embed(color = setting.color)
         .add_field(
             name=l["help.command_category.basic"], 
-            value="</ping:1025071954027347989>, </stats:1025811202946912368>, </userinfo:1026850965854363689>"
+            value="</stats:1059129259806969869>, </userinfo:1059129259806969870>, </serverinfo:1059129259806969871>, </report:1027629303875244057>"
+        )
+        .add_field(
+            name=l["help.command_category.economic"],
+            value="</fishing:1134066288868732989>, </profile:1134066285630722068>, </shop:1027629304307265616>, </work:1027629303875244059>"
+        )
+        .add_field(
+            name=l["help.command_category.reaction"],
+            value="</reaction:1134066292488405092>"
         )
         .add_field(
             name=l["help.command_category.setting"],
-            value="</guild_setting:1055495743714107402>"
+            value="</user_setting:1134066295751573515>"
         )
         .set_thumbnail(ctx.bot.application.icon_url)
     )
