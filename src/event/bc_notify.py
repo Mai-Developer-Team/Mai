@@ -23,7 +23,7 @@ async def up_added(data):
                 {"id": user},
                 {
                     "$set": {
-                        "coin": 800
+                        "coin": d["coin"] + 800
                     }
                 }
             )
