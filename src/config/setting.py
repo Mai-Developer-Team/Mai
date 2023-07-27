@@ -16,7 +16,7 @@ id_shop = os.environ.get("ID_SHOP")
 secret_key = os.environ.get("SECRET_KEY")
 
 debug = False
-version = "3.0.0"
+version = "3.0.1"
 
 if debug == False:
     info = "INFO"

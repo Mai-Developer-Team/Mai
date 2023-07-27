@@ -13,6 +13,7 @@ date = datetime.utcnow().replace(tzinfo=timezone.utc)
 @lightbulb.command("stats", "Статистика Маи")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def stats(ctx: lightbulb.Context) -> None:
+    '''
     l = local.localization(ctx.get_guild().id)
 
     guild_count = await ctx.bot.rest.fetch_my_guilds().count()
@@ -20,21 +21,20 @@ async def stats(ctx: lightbulb.Context) -> None:
     all_shard = ctx.bot.shard_count
     shard_id = ctx.get_guild().shard_id
 
-    emb = (
-        hikari.Embed(
+    emb = hikari.Embed(
             title = l["stats.title"],
             color=setting.color
         )
-        .add_field(name= l["stats.guild_count"], value=guild_count)
-        .add_field(name= l["stats.member_count"], value=member_count)
-        .add_field(name= l["stats.all_shard"], value=all_shard)
-        .add_field(name= l["stats.shard_id"], value=shard_id)
-        .add_field(name= l["stats.uptime"], value=f"<t:{date.timestamp():.0f}:R>")
-        .add_field(name= l["stats.version_library"], value=f'**hikari({hikari.__version__})** | **lightbulb({lightbulb.__version__})**')
-        .add_field(name= l["stats.version_bot"], value=setting.version)
-    )
-
+    emb.add_field(name= l["stats.guild_count"], value=guild_count)
+    emb.add_field(name= l["stats.member_count"], value=member_count)
+    emb.add_field(name= l["stats.all_shard"], value=all_shard)
+    emb.add_field(name= l["stats.shard_id"], value=shard_id)
+    emb.add_field(name= l["stats.uptime"], value=f"<t:{date.timestamp():.0f}:R>")
+    emb.add_field(name= l["stats.version_library"], value=f'**hikari({hikari.__version__})** | **lightbulb({lightbulb.__version__})**')
+    emb.add_field(name= l["stats.version_bot"], value=setting.version)
     await ctx.respond(embed=emb)
+    '''
+    await ctx.respond("Команда временно отключена из-за внутренний ошибки, которую пока невозможно обнаружить.")
 
 def load(client):
     client.add_plugin(plugin)

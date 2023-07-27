@@ -22,8 +22,9 @@ def add_xp(id):
 def display_lvl(id):
     if db.user(id) != None:
         d = db.user(id)["xp"]
+        current_level = 0
 
-        #Я знаю, что это говно, но это мое
+        # Я знаю, что это говно, но это мое
         if d >= 50:
             current_level = 0
         if d >= 100:
