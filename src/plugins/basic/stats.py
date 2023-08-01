@@ -17,7 +17,7 @@ async def stats(ctx: lightbulb.Context) -> None:
 
     l = local.localization(ctx.get_guild().id)
 
-    guild_count = await ctx.bot.rest.fetch_my_guilds().count()
+    guild_count = len(ctx.bot.cache.get_guilds_view())
     member_count = len(ctx.bot.cache.get_users_view())
     all_shard = ctx.bot.shard_count
     shard_id = ctx.get_guild().shard_id
