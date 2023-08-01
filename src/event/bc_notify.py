@@ -2,6 +2,7 @@ import lightbulb
 import hikari
 
 from boticordpy import BotiCordWebsocket
+import re
 
 from config import setting
 from utils import db
@@ -19,8 +20,9 @@ async def up_added(data):
         d = db.user(user)
 
         if d["nothing"] != False:
+            user_id = [int(s) for s in re.findall(r'\b\d+\b', user)]
             db.db.user.update_one(
-                {"id": user},
+                {"id": user_id},
                 {
                     "$set": {
                         "coin": d["coin"] + 800

@@ -117,8 +117,8 @@ async def shop(ctx: lightbulb.Context) -> None:
     if list == "Удочка":
         id = int(ctx.options.id)
 
-        if user["rod"] >= id:
-            await ctx.respond(l["shop.buy.rod.was"], flags=hikari.MessageFlag.EPHEMERAL)
+        if user["rod"] != None:
+            if user["rod"] >= id: await ctx.respond(l["shop.buy.rod.was"], flags=hikari.MessageFlag.EPHEMERAL)
             return
 
         if id <= 0:
@@ -126,7 +126,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
 
         if id == 1:
-            if user["coin"] <= 900:
+            if user["coin"] < 900:
                 await ctx.respond(l["shop.buy.pay.false"].format(900-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
@@ -146,7 +146,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.1"]))
             return
         if id == 2:
-            if user["coin"] <= 2000:
+            if user["coin"] < 2000:
                 await ctx.respond(l["shop.buy.pay.false"].format(2000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
@@ -166,7 +166,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.2"]))
             return
         if id == 3:
-            if user["coin"] <= 4500:
+            if user["coin"] < 4500:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(4500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -186,7 +186,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.3"]))
             return
         if id == 4:
-            if user["coin"] <= 7800:
+            if user["coin"] < 7800:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(7800-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -206,7 +206,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.4"]))
             return
         if id == 5:
-            if user["coin"] <= 11000:
+            if user["coin"] < 11000:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(11000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -226,7 +226,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.5"]))
             return
         if id == 6:
-            if user["coin"] <= 16500:
+            if user["coin"] < 16500:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(16500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -246,7 +246,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.6"]))
             return
         if id == 7:
-            if user["coin"] <= 20000:
+            if user["coin"] < 20000:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(20000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -266,7 +266,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.7"]))
             return
         if id == 8:
-            if user["coin"] <= 27000:
+            if user["coin"] < 27000:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(27000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -286,7 +286,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.rod.id.8"]))
             return
         if id == 9:
-            if user["coin"] <= 40000:
+            if user["coin"] < 40000:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(40000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -311,8 +311,8 @@ async def shop(ctx: lightbulb.Context) -> None:
     if list == "Крючок":
         id = int(ctx.options.id)
 
-        if user["fish_hook"] >= id:
-            await ctx.respond(l["shop.buy.fish_hook.was"], flags=hikari.MessageFlag.EPHEMERAL)
+        if user["fish_hook"] != None:
+            if user["fish_hook"] >= id: await ctx.respond(l["shop.buy.fish_hook.was"], flags=hikari.MessageFlag.EPHEMERAL)
             return
 
         if id <= 0:
@@ -320,7 +320,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
 
         if id == 1:
-            if user["coin"] <= 250:
+            if user["coin"] < 250:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(250-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -340,7 +340,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.1"]))
             return
         if id == 2:
-            if user["coin"] <= 500:
+            if user["coin"] < 500:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -360,7 +360,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.2"]))
             return
         if id == 3:
-            if user["coin"] <= 1250:
+            if user["coin"] < 1250:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(1250-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -380,7 +380,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.3"]))
             return
         if id == 4:
-            if user["coin"] <= 2500:
+            if user["coin"] < 2500:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(2500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -400,7 +400,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.4"]))
             return
         if id == 5:
-            if user["coin"] <= 3600:
+            if user["coin"] < 3600:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(3600-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -420,7 +420,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format(l["fishing.fish_hook.id.5"]))
             return
         if id == 6:
-            if user["macoin"] <= 25:
+            if user["macoin"] < 25:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(25-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -450,7 +450,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
 
         if id == 1:
-            if user["macoin"] <= 10:
+            if user["macoin"] < 10:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(10-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -470,7 +470,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format("AnimeTyan"))
             return
         if id == 2:
-            if user["macoin"] <= 15:
+            if user["macoin"] < 15:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(15-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -490,7 +490,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format("Сhupachups"))
             return
         if id == 3:
-            if user["macoin"] <= 23:
+            if user["macoin"] < 23:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(23-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -510,7 +510,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format("cipherka"))
             return
         if id == 4:
-            if user["macoin"] <= 30:
+            if user["macoin"] < 30:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(30-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -530,7 +530,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format("swd"))
             return
         if id == 5:
-            if user["macoin"] <= 38:
+            if user["macoin"] < 38:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(38-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
@@ -550,7 +550,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             await ctx.respond(l["shop.buy.pay.done"].format("UwU"))
             return
         if id == 6:
-            if user["macoin"] <= 45:
+            if user["macoin"] < 45:
                 await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(45-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
                 return
 
