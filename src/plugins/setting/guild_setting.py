@@ -17,24 +17,67 @@ plugin = lightbulb.Plugin("guild_setting", default_enabled_guilds=setting.guild_
 @lightbulb.implements(lightbulb.SlashCommand)
 async def guild_setting(ctx: lightbulb.Context) -> None:
     #TODO: привязать бд, локализацию и добавить кнопки на управление
-    class SettingButton(miru.View):
-        @miru.button(label="Язык", style=hikari.ButtonStyle.SECONDARY)
-        async def lang(self, button: miru.Button, ctx: miru.ViewContext):
-            ...
-
-        @miru.button(label="Отключение команд", style=hikari.ButtonStyle.SECONDARY)
-        async def disable(self, button: miru.Button, ctx: miru.ViewContext):
-            ...
-
-        @miru.button(label="Буст", style=hikari.ButtonStyle.SECONDARY)
-        async def boost(self, button: miru.Button, ctx: miru.ViewContext):
-            ...
-
     ser = db.server(ctx.get_guild().id)
     l = local.localization(ctx.get_guild().id)
+
+    class LocalButton(miru.View):
+        @miru.button(emoji="🇷🇺")
+        async def ru_button(self, button: miru.Button, ctx: miru.ViewContext):
+            ...
+        @miru.button(emoji="<:c_w_:837281007693594665>")
+        async def ru_meow_button(self, button: miru.Button, ctx: miru.ViewContext):
+            ...
+
+        @miru.button(emoji="🇧🇾")
+        async def by_button(self, button: miru.Button, ctx: miru.ViewContext):
+            ...
+
+        @miru.button(emoji="🇬🇧")
+        async def en_button(self, button: miru.Button, ctx: miru.ViewContext):
+            ...
+
+    if ser["blockSettings"] != True:
+        class SettingButton(miru.View):
+            @miru.button(label="Язык", style=hikari.ButtonStyle.SECONDARY)
+            async def lang(self, button: miru.Button, ctx: miru.ViewContext):
+                view = LocalButton()
+                emb = (
+                    hikari.Embed(
+                        title="Смена языка",
+                        description="Здесь вы можете поменять язык в боте. Можно так же помочь в переводе [на гитхабе](https://github.com/Mai-Developer-Team/Mai/tree/dev/src/config/localization)\nВнизу отображены флаги стран, где используется тот или иной язык(и не только)",
+                        color=setting.color
+                    )
+                )
+                q = await ctx.edit_response(embed=emb, components=view, flags=hikari.MessageFlag.EPHEMERAL)
+                await view.start(q)
+
+            @miru.button(label="Отключение команд", style=hikari.ButtonStyle.SECONDARY)
+            async def disable(self, button: miru.Button, ctx: miru.ViewContext):
+                ...
+
+            @miru.button(label="Буст", style=hikari.ButtonStyle.SECONDARY)
+            async def boost(self, button: miru.Button, ctx: miru.ViewContext):
+                ...
+    else:
+        class SettingButton(miru.View):
+            @miru.button(label="Язык", style=hikari.ButtonStyle.SECONDARY, disabled=True)
+            async def lang(self, button: miru.Button, ctx: miru.ViewContext):
+                ...
+
+            @miru.button(label="Отключение команд", style=hikari.ButtonStyle.SECONDARY, disabled=True)
+            async def disable(self, button: miru.Button, ctx: miru.ViewContext):
+                ...
+
+            @miru.button(label="Буст", style=hikari.ButtonStyle.SECONDARY, disabled=True)
+            async def boost(self, button: miru.Button, ctx: miru.ViewContext):
+                ...
+
     lang_ser = {
         "ru-RU": l["lang"],
-        "ru-MEOW": l["lang"]
+        "ru-MEOW": l["lang"],
+        "by-BY": l["lang"],
+        "en-US": l["lang"],
+        "es-ES": l["lang"],
     }
 
     emb = hikari.Embed(
