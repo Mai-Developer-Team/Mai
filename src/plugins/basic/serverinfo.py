@@ -16,8 +16,12 @@ async def serverinfo(ctx: lightbulb.Context) -> None:
 
     guild = ctx.get_guild()
     member = guild.get_members()
-    rules = await guild.fetch_rules_channel() or l["serverinfo.general_channel.NONE"]
-    systems = await guild.fetch_system_channel() or l["serverinfo.general_channel.NONE"]
+    try:
+        rules = await guild.fetch_rules_channel() or l["serverinfo.general_channel.NONE"]
+        systems = await guild.fetch_system_channel() or l["serverinfo.general_channel.NONE"]
+    except hikari.ForbiddenError:
+        rules = l["serverinfo.general_channel.NONE"]
+        systems = l["serverinfo.general_channel.NONE"]
 
     lang_server = {
         "de": l["serverinfo.lang_server.de"],
