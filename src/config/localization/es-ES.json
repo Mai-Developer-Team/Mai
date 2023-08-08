@@ -1,17 +1,17 @@
 {
    "lang": "Esperanto",
 
-   "help.command_category.basic": "Основные команды",
+   "help.command_category.basic": "Bazaj komandoj",
 
-   "userinfo.title": "Информация о пользователе",
-   "userinfo.user": "Пользователь",
-   "userinfo.date": "Дата регистрации",
-   "userinfo.badge": "Значки",
-   "userinfo.bio": "О себе",
-   "userinfo.premium": "Подписка",
-   "userinfo.premium.message": "Подписка действует до **{}**",
-   "userinfo.block": ":warning: Осторожно",
-   "userinfo.block.reason": "Данный пользователь находится в чёрном списке по причине:\n**{}**",
+   "userinfo.title": "Informoj pri uzanto",
+   "userinfo.user": "Uzanto",
+   "userinfo.date": "Dato de registriĝo",
+   "userinfo.badge": "Insignoj",
+   "userinfo.bio": "Pri uzanto",
+   "userinfo.premium": "Abono",
+   "userinfo.premium.message": "Abono valida ĝis **{}**",
+   "userinfo.block": ":warning: Atenton",
+   "userinfo.block.reason": "Ĉi tiu uzanto estas en nigra listo pro la kialo:\n**{}**",
 
    "stats.title": "Основная статистика Маи",
    "stats.guild_count": "Всего серверов",
