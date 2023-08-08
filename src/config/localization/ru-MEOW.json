@@ -68,6 +68,29 @@
 
    "help.command_category.setting": "Шерсть",
 
+   "guild_setting.title.main": "Настройки сервера {}",
+   "guild_setting.description.main": "Здесь находятся все настройки сервера для удобного использования бота",
+   "guild_setting.main_lang": "Основной язык",
+   "guild_setting.eco_command": "Экономические команды",
+   "guild_setting.eco_command.enable": "На данном сервере экономические команды не отключены",
+   "guild_setting.eco_command.disable": "На данном сервере экономические команды отключены",
+   "guild_setting.boost": "Буст",
+   "guild_setting.boost.enable": "На этом сервере доступны команды, которые проходят публичный бета-тест",
+   "guild_setting.disable_setting.name": "Внимание",
+   "guild_setting.disable_setting.value": "На данном сервере были заблокированы любые настройки разработчиком",
+   "guild_setting.button.lang": "Язык",
+   "guild_setting.button.lang.title": "Смена языка",
+   "guild_setting.button.lang.description": "Здесь вы можете поменять язык в боте. Можно так же помочь в переводе [на гитхабе](https://github.com/Mai-Developer-Team/Mai/tree/dev/src/config/localization)\nВнизу отображены флаги стран, где используется тот или иной язык(и не только)",
+   "guild_setting.button.lang.using": "Данный язык уже используется на сервере, воспользуйтесь другим",
+   "guild_setting.button.lang.done": "Вы успешно изменили язык в боте",
+   "guild_setting.button.disable_command": "Отключение команд",
+   "guild_setting.button.disable_command.disable": "Вы отключили **Экономические команды** на данном сервере",
+   "guild_setting.button.disable_command.enable": "Вы включили **Экономические команды** на данном сервере",
+   "guild_setting.button.boost": "Буст",
+   "guild_setting.button.boost.not_owner": "Вы не можете выдавать на этот сервер буст, т.к не являетесь владельцем сервера",
+   "guild_setting.button.boost.not_premium": "У вас нету действующей подписки, чтобы выдать на этот сервер!",
+   "guild_setting.button.boost.err_done_guild": "Вы уже выдавали буст серверу",
+   "guild_setting.button.boost.done_guild": "Вы успешно выдали на этот сервер буст! Подробнее можно узнать про них в [документации](https://docs.maibot.xyz/Поддержка/буст/#_2)",
 
    "help.command_category.economic": "Экономика",
 
@@ -125,7 +148,7 @@
    "shop.buy.rod.none": "Такой мявдочки неть",
    "shop.buy.fish_hook.none": "Такого крючка не существует!",
    "shop.buy.rod.was": "У вас уже есть такая мявдочки или была в использовании",
-   "shop.buy.fish_hook.was": "У вас уже есть такой крючок или был в использовании",
+   "shop.buy.fish_hook.was": "У вас уже есть такой крючок",
 
    "ping": "Мяу!",
 
