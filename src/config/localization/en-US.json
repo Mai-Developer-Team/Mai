@@ -110,7 +110,7 @@
    "fishing.none_rod": "You don't have a fishing rod to go fishing",
    "fishing.title": "Fishing",
    "fishing.description": "Now you can only go every other day",
-   "fishing.field.rod_money": "Вы заработали",
+   "fishing.field.rod_money": "You have earned",
    "fishing.name.fish_hook": "Fish hook",
    "fishing.fish_hook.err": "Your hook is lost in the depths of the lake",
    "fishing.fish_hook.ok": "Thanks to the hook, we earned extra {} :coin:",
