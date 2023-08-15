@@ -127,7 +127,7 @@ async def shop(ctx: lightbulb.Context) -> None:
 
         if id == 1:
             if user["coin"] < 900:
-                await ctx.respond(l["shop.buy.pay.false"].format(900-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL)
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 900), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -139,7 +139,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 900-user["coin"]
+                    "coin": user["coin"] - 900
                 }}
             )
 
@@ -147,7 +147,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 2:
             if user["coin"] < 2000:
-                await ctx.respond(l["shop.buy.pay.false"].format(2000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL)
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 2000), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -159,7 +159,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 2000-user["coin"]
+                    "coin": user["coin"] - 2000
                 }}
             )
 
@@ -167,7 +167,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 3:
             if user["coin"] < 4500:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(4500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 4500), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -179,7 +179,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 4500-user["coin"]
+                    "coin": user["coin"] - 4500
                 }}
             )
 
@@ -187,7 +187,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 4:
             if user["coin"] < 7800:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(7800-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 7800), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -199,7 +199,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 7800-user["coin"]
+                    "coin": user["coin"] - 7800
                 }}
             )
 
@@ -207,7 +207,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 5:
             if user["coin"] < 11000:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(11000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 11000), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -219,7 +219,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 11000-user["coin"]
+                    "coin": user["coin"] - 11000
                 }}
             )
 
@@ -227,7 +227,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 6:
             if user["coin"] < 16500:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(16500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 16500), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -239,7 +239,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 16500-user["coin"]
+                    "coin": user["coin"] - 16500
                 }}
             )
 
@@ -247,7 +247,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 7:
             if user["coin"] < 20000:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(20000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 20000), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -259,7 +259,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 20000-user["coin"]
+                    "coin": user["coin"] - 20000
                 }}
             )
 
@@ -267,7 +267,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 8:
             if user["coin"] < 27000:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(27000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 27000), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -279,7 +279,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 27000-user["coin"]
+                    "coin": user["coin"] - 27000
                 }}
             )
 
@@ -287,7 +287,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 9:
             if user["coin"] < 40000:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(40000-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 40000), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -299,7 +299,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 40000-user["coin"]
+                    "coin": user["coin"] - 40000
                 }}
             )
 
@@ -321,7 +321,7 @@ async def shop(ctx: lightbulb.Context) -> None:
 
         if id == 1:
             if user["coin"] < 250:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(250-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 250), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -333,7 +333,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 250-user["coin"]
+                    "coin": user["coin"] - 250
                 }}
             )
 
@@ -341,7 +341,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 2:
             if user["coin"] < 500:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 500), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -353,7 +353,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 500-user["coin"]
+                    "coin": user["coin"] - 500
                 }}
             )
 
@@ -361,7 +361,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 3:
             if user["coin"] < 1250:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(1250-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 1250), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -373,7 +373,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 1250-user["coin"]
+                    "coin": user["coin"] - 1250
                 }}
             )
 
@@ -381,7 +381,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 4:
             if user["coin"] < 2500:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(2500-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 2500), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -393,7 +393,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 2500-user["coin"]
+                    "coin": user["coin"] - 2500
                 }}
             )
 
@@ -401,7 +401,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 5:
             if user["coin"] < 3600:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(3600-user["coin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["coin"] - 3600), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -413,7 +413,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "coin": 3600-user["coin"]
+                    "coin": user["coin"] - 3600
                 }}
             )
 
@@ -421,7 +421,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 6:
             if user["macoin"] < 25:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(25-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["macoin"] - 25), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -444,14 +444,13 @@ async def shop(ctx: lightbulb.Context) -> None:
     if list == "Баннер":
         id = int(ctx.options.id)
 
-
         if id <= 0:
             await ctx.respond(l["shop.buy.pay.0"], flags=hikari.MessageFlag.EPHEMERAL)
             return
 
         if id == 1:
             if user["macoin"] < 10:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(10-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["macoin"] - 10), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -463,7 +462,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "macoin": 10-user["macoin"]
+                    "macoin": user["macoin"] - 10
                 }}
             )
 
@@ -471,7 +470,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 2:
             if user["macoin"] < 15:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(15-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["macoin"] - 15), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -483,7 +482,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "macoin": 15-user["macoin"]
+                    "macoin": user["macoin"] - 15
                 }}
             )
 
@@ -491,7 +490,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 3:
             if user["macoin"] < 23:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(23-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["macoin"] - 23), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -503,7 +502,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "macoin": 23-user["macoin"]
+                    "macoin": user["macoin"] - 23
                 }}
             )
 
@@ -511,7 +510,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 4:
             if user["macoin"] < 30:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(30-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["macoin"] - 30), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -523,7 +522,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "macoin": 30-user["macoin"]
+                    "macoin": user["macoin"] - 30
                 }}
             )
 
@@ -531,7 +530,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 5:
             if user["macoin"] < 38:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(38-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["macoin"] - 38), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -543,7 +542,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "macoin": 38-user["macoin"]
+                    "macoin": user["macoin"] - 38
                 }}
             )
 
@@ -551,7 +550,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             return
         if id == 6:
             if user["macoin"] < 45:
-                await ctx.respond(await ctx.respond(l["shop.buy.pay.false"].format(45-user["macoin"]), flags=hikari.MessageFlag.EPHEMERAL))
+                await ctx.respond(l["shop.buy.pay.false"].format(user["macoin"] - 45), flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
             db.db.user.update_one(
@@ -563,7 +562,7 @@ async def shop(ctx: lightbulb.Context) -> None:
             db.db.user.update_one(
                 {"id": ctx.author.id},
                 {"$set": {
-                    "macoin": 45-user["macoin"]
+                    "macoin": user["macoin"] - 45
                 }}
             )
 

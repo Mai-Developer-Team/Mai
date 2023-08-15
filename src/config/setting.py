@@ -16,7 +16,7 @@ id_shop = os.environ.get("ID_SHOP")
 secret_key = os.environ.get("SECRET_KEY")
 
 debug = False
-version = "3.0.1"
+version = "3.1.0"
 
 if debug == False:
     info = "INFO"
@@ -36,7 +36,7 @@ plugins = [
     "plugins.basic.userinfo",
     "plugins.basic.serverinfo",
     "plugins.basic.report",
-    #"plugins.dev.pay_boost",
+    "plugins.basic.pay_boost",
     "plugins.economic.work",
     "plugins.economic.profile",
     "plugins.economic.fishing",
@@ -51,7 +51,7 @@ plugins = [
     "plugins.setting.guild_setting",
     "plugins.setting.user_setting",
     "event.error",
-    "event.bc_notify",
+    #"event.bc_notify",
     "event.shard_tracker",
     "event.status_tracker"
 ]
