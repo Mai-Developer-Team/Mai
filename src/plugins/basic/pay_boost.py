@@ -28,7 +28,7 @@ plugin = lightbulb.Plugin("pay_boost")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def pay_boost(ctx: lightbulb.Context) -> None:
     await ctx.respond(
-        "Покупка буста временно происходит через эту [ссылку](https://pay.cloudtips.ru/p/63bf166b)! После оплаты зайдите на [сервер](https://discord.gg/nDvGj9RBpN), чтобы подтвердить покупку и получить свою покупку",
+        "Покупка буста временно происходит через эту [ссылку](https://pay.cloudtips.ru/p/63bf166b)! После оплаты зайдите на [сервер](https://discord.gg/nDvGj9RBpN), чтобы подтвердить и получить свою покупку",
         flags=hikari.MessageFlag.EPHEMERAL
     )
     '''
