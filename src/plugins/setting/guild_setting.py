@@ -6,7 +6,7 @@ from config import setting
 from utils import local, db
 
 
-plugin = lightbulb.Plugin("guild_setting", default_enabled_guilds=setting.guild_id)
+plugin = lightbulb.Plugin("guild_setting")
 
 
 @plugin.command()

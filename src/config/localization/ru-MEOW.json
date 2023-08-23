@@ -80,7 +80,7 @@
    "guild_setting.disable_setting.value": "На данном сервере были заблокированы любые настройки разработчиком",
    "guild_setting.button.lang": "Язык",
    "guild_setting.button.lang.title": "Смена языка",
-   "guild_setting.button.lang.description": "Здесь вы можете поменять язык в боте. Можно так же помочь в переводе [на гитхабе](https://github.com/Mai-Developer-Team/Mai/tree/dev/src/config/localization)\nВнизу отображены флаги стран, где используется тот или иной язык(и не только)",
+   "guild_setting.button.lang.description": "Здесь вы можете поменять язык в боте. Можно так же помочь в переводе [на гитхабе](https://github.com/Mai-Developer-Team/Mai/tree/main/src/config/localization)\nВнизу отображены флаги стран, где используется тот или иной язык(и не только)",
    "guild_setting.button.lang.using": "Данный язык уже используется на сервере, воспользуйтесь другим",
    "guild_setting.button.lang.done": "Вы успешно изменили язык в боте",
    "guild_setting.button.disable_command": "Отключение команд",

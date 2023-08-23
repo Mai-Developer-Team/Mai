@@ -19,6 +19,7 @@ async def fishing(ctx: lightbulb.Context) -> None:
     u = db.user(ctx.author.id)
     level.add_xp(ctx.author.id)
     change = random.randint(1, 10)
+    fishhookcoin = 0
 
     coins = db.db.user.find_one({"id": ctx.author.id})["coin"]
 

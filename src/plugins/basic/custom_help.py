@@ -30,7 +30,7 @@ async def help(ctx: lightbulb.Context) -> None:
         )
         .add_field(
             name=l["help.command_category.setting"],
-            value="</user_setting:1134066295751573515>"
+            value="</user_setting:1134066295751573515>, </guild_setting:1141065231364263946>"
         )
         .set_thumbnail(ctx.bot.application.icon_url)
     )
