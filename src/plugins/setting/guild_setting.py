@@ -90,7 +90,7 @@ async def guild_setting(ctx: lightbulb.Context) -> None:
                 return
 
         @miru.button(emoji="<:flag_eo:1143806874311995432>")
-        async def en_button(self, button: miru.Button, ctx: miru.ViewContext):
+        async def eo_button(self, button: miru.Button, ctx: miru.ViewContext):
             if ser["localization"] == "eo-EO":
                 await ctx.respond(l["guild_setting.button.lang.using"],
                                   flags=hikari.MessageFlag.EPHEMERAL)
