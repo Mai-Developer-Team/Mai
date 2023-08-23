@@ -89,6 +89,23 @@ async def guild_setting(ctx: lightbulb.Context) -> None:
                                         flags=hikari.MessageFlag.EPHEMERAL)
                 return
 
+        @miru.button(emoji="<:flag_eo:1143806874311995432>")
+        async def en_button(self, button: miru.Button, ctx: miru.ViewContext):
+            if ser["localization"] == "eo-EO":
+                await ctx.respond(l["guild_setting.button.lang.using"],
+                                  flags=hikari.MessageFlag.EPHEMERAL)
+                return
+            else:
+                db.db.server.update_one(
+                    {"id": ctx.get_guild().id},
+                    {"$set": {
+                        "localization": "eo-EO"
+                    }}
+                )
+                await ctx.edit_response(l["guild_setting.button.lang.done"], embed=None, components=[],
+                                        flags=hikari.MessageFlag.EPHEMERAL)
+                return
+
     if ser["blockSettings"] != True:
         class SettingButton(miru.View):
             @miru.button(label=l["guild_setting.button.lang"], style=hikari.ButtonStyle.SECONDARY)

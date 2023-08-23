@@ -80,7 +80,7 @@
    "guild_setting.disable_setting.value": "Sur ĉi tiu servilo, iuj agordoj estis blokitaj de la programisto",
    "guild_setting.button.lang": "Lingvo",
    "guild_setting.button.lang.title": "Ŝanĝi lingvon",
-   "guild_setting.button.lang.description": "Ĉi tie vi povas ŝanĝi la lingvon en la bot. Vi ankaŭ povas helpi pri la traduko [ĉe GitHub](https://github.com/Mai-Developer-Team/Mai/tree/dev/src/config/localization)\\nMalsupre estas la flagoj de landoj kie tiu aŭ alia lingvo estas uzata (kaj ne nur)",
+   "guild_setting.button.lang.description": "Ĉi tie vi povas ŝanĝi la lingvon en la bot. Vi ankaŭ povas helpi pri la traduko [ĉe GitHub](https://github.com/Mai-Developer-Team/Mai/tree/dev/src/config/localization)\nMalsupre estas la flagoj de landoj kie tiu aŭ alia lingvo estas uzata (kaj ne nur)",
    "guild_setting.button.lang.using": "Ĉi tiu lingvo jam estas uzata en la servilo, uzu alian",
    "guild_setting.button.lang.done": "Vi sukcese ŝanĝis la lingvon en la bot",
    "guild_setting.button.disable_command": "Malebligado de komandoj",
