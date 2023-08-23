@@ -197,7 +197,7 @@ async def guild_setting(ctx: lightbulb.Context) -> None:
         "ru-MEOW": l["lang"],
         "by-BY": l["lang"],
         "en-US": l["lang"],
-        "es-ES": l["lang"],
+        "eo-EO": l["lang"],
     }
 
     emb = hikari.Embed(
