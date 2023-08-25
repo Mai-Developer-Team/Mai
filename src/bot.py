@@ -15,7 +15,8 @@ client = lightbulb.BotApp(
     intents = hikari.Intents.ALL_MESSAGES 
     | hikari.Intents.GUILDS 
     | hikari.Intents.GUILD_MEMBERS 
-    | hikari.Intents.GUILD_VOICE_STATES,
+    | hikari.Intents.GUILD_VOICE_STATES
+    | hikari.Intents.GUILD_INVITES,
     logs = {
         "version": 1,
         "incremental": True,
