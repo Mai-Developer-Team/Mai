@@ -21,7 +21,7 @@ version = "3.1.0"
 if debug == False:
     info = "INFO"
     token = token
-    status = "https://docs.maibot.xyz"
+    status = "<:hm:873491704353796146> https://docs.maibot.xyz"
 else:
     info = "DEBUG"
     token = dev_token #yes
