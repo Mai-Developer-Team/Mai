@@ -42,5 +42,5 @@ if __name__ == '__main__':
 client.run(
     activity = hikari.Activity( 
         name = setting.status,
-        type = hikari.ActivityType.COMPETING)
+        type = hikari.ActivityType.CUSTOM)
     )
