@@ -5,7 +5,7 @@ hikari-miru
 lavaplayer
 
 python-dotenv==1.0.0
-requests==2.29.0
+requests==2.32.2
 pymongo==4.5.0
 dnspython==2.4.2
 boticordpy
